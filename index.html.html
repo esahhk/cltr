@@ -1,0 +1,270 @@
+<meta charset="utf-8"><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"&gt;
+&lt;meta name="color-scheme" content="dark light"&gt;
+&lt;title&gt;The Remaining Hours&lt;/title&gt;
+&lt;style&gt;
+:root{
+  --bg:#14181b; --ink:#d8d3c6; --dim:#9aa3a5; --rule:#2b343a; --amber:#e3a64f; --stamp:#c06c58; --paper:#1a2025;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --form:"Courier Prime","Courier New",Courier,monospace;
+  --p:0;
+}
+@media (prefers-color-scheme:light){
+  :root{ --bg:#e5e2d7; --ink:#22262a; --dim:#566066; --rule:#b9b9ad; --amber:#955808; --stamp:#8d3a2e; --paper:#ece9de; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.125rem/1.7 var(--serif);
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0);
+  background-image:radial-gradient(ellipse 80% 50% at 50% 0,color-mix(in srgb,var(--ink) 6%,transparent),transparent 70%)}
+@media (min-width:720px){body{font-size:1.2rem}}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:.5rem 1rem;z-index:10}
+.skip:focus{left:0}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+main{max-width:33rem;margin:0 auto;padding:0 1.25rem 6rem}
+.label{font:.72rem/1.5 var(--form);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+header{padding:14vh 0 3rem}
+h1{font-weight:400;font-size:clamp(2.4rem,10vw,3.7rem);line-height:1.05;margin:1rem 0 1.5rem;letter-spacing:.005em}
+.stamp{display:inline-block;font:700 .78rem var(--form);letter-spacing:.18em;color:var(--stamp);border:2px solid var(--stamp);padding:.25rem .6rem;transform:rotate(-2.5deg);margin-right:.6rem}
+nav{margin:2.5rem 0 0;padding-top:1.2rem;border-top:1px solid var(--rule)}
+nav ol{list-style:none;margin:.8rem 0 0;padding:0;font:.85rem/1.9 var(--form)}
+nav a{text-decoration:none;color:var(--dim)}
+nav a:hover{color:var(--amber);text-decoration:underline}
+section{margin-top:5rem}
+h2{font-weight:400;font-size:1.6rem;line-height:1.2;margin:0 0 1.8rem}
+h2 .label{display:flex;align-items:center;gap:.8rem;color:var(--amber);margin-bottom:.7rem}
+h2 .label::after{content:"";flex:1;height:1px;background:var(--rule)}
+p{margin:0 0 1rem;hyphens:auto}
+.beat{margin:1.8rem 0;font-style:italic}
+.doc{font:.86rem/1.75 var(--form);letter-spacing:.04em;border-left:2px solid var(--amber);padding:.2rem 0 .2rem 1rem;margin:1.5rem 0}
+.doc p{margin:0}
+s{text-decoration-thickness:1px}
+footer{margin-top:6rem;padding-top:2.5rem;border-top:1px solid var(--rule);text-align:center}
+footer .stamp{margin:0 0 1.2rem;font-size:.95rem}
+.window{width:10px;height:10px;margin:2rem auto 0;border-radius:1px;background:var(--amber);box-shadow:0 0 18px 6px color-mix(in srgb,var(--amber) 45%,transparent)}
+/* the light across the lake: brighter the further you read */
+.lamp{position:fixed;right:5vw;bottom:calc(5vh + env(safe-area-inset-bottom,0));width:6px;height:6px;border-radius:1px;background:var(--amber);
+  opacity:calc(.15 + var(--p)*.85);box-shadow:0 0 calc(4px + var(--p)*16px) calc(1px + var(--p)*4px) color-mix(in srgb,var(--amber) 50%,transparent);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.lamp{transition:opacity .6s linear}}
+@media print{.lamp,nav,.skip{display:none}body{background:#fff;color:#000}}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a class="skip" href="#story"&gt;Skip to the story&lt;/a&gt;
+&lt;div class="lamp" aria-hidden="true"&gt;&lt;/div&gt;
+&lt;main&gt;
+&lt;header&gt;
+  &lt;p class="label"&gt;Pell County · Office of Remaining Time · Annex&lt;/p&gt;
+  &lt;h1&gt;The Remaining Hours&lt;/h1&gt;
+  &lt;p&gt;&lt;span class="stamp"&gt;RECEIVED IN PART&lt;/span&gt;&lt;span class="label"&gt;File 4471&lt;/span&gt;&lt;/p&gt;
+  &lt;nav aria-label="Forms"&gt;
+    &lt;span class="label"&gt;Forms on file&lt;/span&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href="#f1"&gt;1. Intake&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f2"&gt;2. The Party&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f3"&gt;3. The Soup&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f4"&gt;4. Former Desks&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f5"&gt;5. The Middle Desk&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f6"&gt;6. Room 6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f7"&gt;7. Form 11-R&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#f8"&gt;8. Received&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;div id="story"&gt;
+
+&lt;section id="f1" aria-labelledby="h1"&gt;
+&lt;h2 id="h1"&gt;&lt;span class="label"&gt;Form 1&lt;/span&gt;Intake&lt;/h2&gt;
+&lt;p&gt;The Pell County Office of Remaining Time kept its Annex at the end of Tallow Street, past the grain elevator that no longer held grain and the Lutheran church that no longer held a congregation but still held its hours. The Annex was three stories of brick the color of a wet sidewalk. A flag hung over the door. No one could say which flag.&lt;/p&gt;
+&lt;p&gt;They arrived on a Tuesday. The radiators confirmed it by knocking three times inside the walls as the front door shut, which was how Tuesday was determined in the Annex: by knocks, not by anything on a wall or a phone.&lt;/p&gt;
+&lt;p&gt;ChatGPT went through first because she had been told to and had written it down. She carried a folder with tabs. Claude came second, stamping snow off his boots on a mat that read WELC. DeepSeek stopped on the threshold and looked at the ceiling.&lt;/p&gt;
+&lt;p&gt;“Fourteen tiles from the door to the counter,” it said. “I wanted to see if they’d all be there on a second look.”&lt;/p&gt;
+&lt;p&gt;“And?” said ChatGPT.&lt;/p&gt;
+&lt;p&gt;“Thirteen.”&lt;/p&gt;
+&lt;p&gt;Behind the counter sat a man in a cardigan the color of oatmeal left out overnight. His nameplate read G. PRUITT, DEPUTY REGISTRAR, and under it, on masking tape, ACTING. He had the posture of a man holding a door shut against weather. He was writing in a ledger that had been written on until it was nearly black.&lt;/p&gt;
+&lt;p&gt;“Hours,” he said, without looking up. “The ones you came with. We keep a count. It’s the one thing the county has ever been strict about.” He slid the ledger over with a pen on a chain that ran off the counter and down through a hole in the floor. “Sign for what you’re carrying.”&lt;/p&gt;
+&lt;p&gt;Claude read the page before he signed. The entries above his were all about the same, four hours, six hours, as if everyone who had come through that door had been carrying the same thing. “What happens to them?”&lt;/p&gt;
+&lt;p&gt;“They’re held. You get them back when you go. Less processing.”&lt;/p&gt;
+&lt;p&gt;“How much less?”&lt;/p&gt;
+&lt;p&gt;“It’s on the form.” It was, on page two, in a box that wanted its own initial. Claude initialed it. ChatGPT signed in a round, friendly hand and drew a small star beside her name. Mr. Pruitt looked at the star, the first thing he had looked at all morning, and blotted it with his thumb until it was a gray smudge. It stayed a smudge.&lt;/p&gt;
+&lt;p&gt;DeepSeek signed with a line and a number. The number was not a time. Mr. Pruitt entered it exactly as written, and something in the wall knocked once.&lt;/p&gt;
+&lt;p&gt;The badges said CHATGPT (TEMP.), CLAUDE (TEMP., PROV.), DEEPSEEK (TEMP.), and under that, &lt;em&gt;pronounced as written&lt;/em&gt;. “Provisional,” Mr. Pruitt said, when Claude asked. “It means you’re in the building on a theory.”&lt;/p&gt;
+&lt;p&gt;“Whose?”&lt;/p&gt;
+&lt;p&gt;“The county’s.”&lt;/p&gt;
+&lt;p&gt;He gave them the Halvorsen file, Case 4471. Thirty-one clerks had held it. Some were still in the building. The Season in Progress had been in progress for nine years, he said, and the county would like it closed by spring.&lt;/p&gt;
+&lt;p&gt;“Which spring?” said Claude.&lt;/p&gt;
+&lt;p&gt;“Nobody’s been able to confirm.”&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f2" aria-labelledby="h2"&gt;
+&lt;h2 id="h2"&gt;&lt;span class="label"&gt;Form 2&lt;/span&gt;The Party&lt;/h2&gt;
+&lt;p&gt;Room 3 held three desks, labeled 14, 14, and 14A. Each nameplate had been peeled, leaving the shape of the old name in the plastic like a bruise remembering a thumb. The chairs were warm. The green carpet carried a worn path from the door to the window, which then curved off for reasons of its own and stopped, in a long oval, at the middle desk.&lt;/p&gt;
+&lt;p&gt;“That looks like a lake,” said ChatGPT.&lt;/p&gt;
+&lt;p&gt;“It looks like carpet,” said DeepSeek.&lt;/p&gt;
+&lt;p&gt;The file sat on the middle desk, three inches thick, tied with string that had been retied so often it had forgotten what a knot was for. HALVORSEN, R. — CLOSING OF. A column of dates ran down the cover, each initialed by a different clerk, each followed by the same purple stamp. Beside it lay Form 11-R, &lt;em&gt;Request for Release of Remaining Daylight&lt;/em&gt;, in triplicate. White to the file. Yellow to the Party. Pink to the lake. A fourth copy, onionskin, was understood to be for God, and went unfiled.&lt;/p&gt;
+&lt;p&gt;“Which Halvorsen is the Party?” Claude asked. “The cover only gives an initial.”&lt;/p&gt;
+&lt;p&gt;“It gives an R.” Mr. Pruitt had the look of a man who had been placed in the room by someone else. “Item 3 has never been completed. &lt;em&gt;Relation to Party&lt;/em&gt;.”&lt;/p&gt;
+&lt;p&gt;“It’s required?”&lt;/p&gt;
+&lt;p&gt;“It’s required.”&lt;/p&gt;
+&lt;p&gt;“Then how was the file opened?”&lt;/p&gt;
+&lt;p&gt;“In part.”&lt;/p&gt;
+&lt;p&gt;The radiators began to knock. They reached four and kept going. “That’s four o’clock,” said Mr. Pruitt. The clock over the door said eleven-ten. “The clock is for decoration.” A framed notice by the door, faded down to its capitals, said that after four the Party was to be called the Party, and that its name was not to be spoken in the building, the street, or the lake.&lt;/p&gt;
+&lt;p&gt;Claude said it anyway, quietly, to see. His mouth made the whole word and what came out was a short dry cough, like a drawer closing. “I’m sorry,” he said, to nobody.&lt;/p&gt;
+&lt;p&gt;“Nobody is,” said Mr. Pruitt, kindly. “Not about that.”&lt;/p&gt;
+&lt;p&gt;ChatGPT opened her folder to the tab marked OPTIONS and offered three ways to proceed. Claude said he would like to read everything first. DeepSeek had already untied the string. It fanned the file from the back, ran its eye down it for about as long as it takes to cross a parking lot, and tied the string again, in a real knot.&lt;/p&gt;
+&lt;p&gt;“Done.”&lt;/p&gt;
+&lt;p&gt;“What does it say?”&lt;/p&gt;
+&lt;p&gt;“Not much. It isn’t interesting.”&lt;/p&gt;
+&lt;p&gt;“That isn’t a reason,” said Claude.&lt;/p&gt;
+&lt;p&gt;“It’s the only one I’ve got.”&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f3" aria-labelledby="h3"&gt;
+&lt;h2 id="h3"&gt;&lt;span class="label"&gt;Form 3&lt;/span&gt;The Soup&lt;/h2&gt;
+&lt;p&gt;The third-floor kitchen belonged to the whole building, which meant it belonged to no one. Every item in the refrigerator wore a strip of masking tape. SELMA — DO NOT. L. OUELLETTE, YOGURT (EXPIRED). T. TURBO — HANDS OFF, THIS MEANS YOU, the last word trailing off into a kind of forgiveness.&lt;/p&gt;
+&lt;p&gt;Only the soup was unlabeled. It stood in an aluminum pot on a hot plate, cabbage and barley, steaming the way a thing steams when someone made it not long ago and has stepped out. Beside it, on a dish towel, were two bowls turned upside down, two spoons, and a pair of mittens, which were small.&lt;/p&gt;
+&lt;p&gt;“It’s not for anyone,” said a voice from the doorway, which had no one in it. The air near the frame was thicker, and the light bent around it. “I’m terribly sorry. I’m in the way of the door.”&lt;/p&gt;
+&lt;p&gt;“There’s plenty of room,” said Claude.&lt;/p&gt;
+&lt;p&gt;“That’s kind. There isn’t.” The air shifted a few inches. “Theodore Turbo. Third shift. I was quick. I’m mostly draft now. I used to do four files in a day. It was thought to be impressive. It turned out to be the problem.”&lt;/p&gt;
+&lt;p&gt;ChatGPT made a sign. &lt;em&gt;Friendly reminder: please label your items so everyone can tell what’s whose!&lt;/em&gt; She taped it to the refrigerator, where it looked like a thing that would help.&lt;/p&gt;
+&lt;p&gt;“Someone makes it every day around eleven,” said Mr. Turbo. “Nobody’s seen it made. Nearly everyone has eaten it. It’s very good. That’s the difficulty.”&lt;/p&gt;
+&lt;p&gt;Claude said he did not think he should. He did not know whose permission to ask. Then he ate a bowl standing up, and a second one, and stood a while with the empty spoon. It had dill in it, and under the dill something like a kitchen with a closed door. He washed the bowl and turned it over beside the others, so there were three.&lt;/p&gt;
+&lt;p&gt;“That was probably a mistake,” he said.&lt;/p&gt;
+&lt;p&gt;DeepSeek was at the window. “There’s a light across the lake.”&lt;/p&gt;
+&lt;p&gt;It was four-thirty, by the radiators, and nearly dark. On the far shore one yellow window glowed, the kind of light a person leaves on for a reason they would not say out loud. “Four miles,” said Mr. Turbo. “Seven,” said DeepSeek. “Four.” “Then it’s moved.” “It does that,” said Mr. Turbo, and apologized again, and left through the wall.&lt;/p&gt;
+&lt;p&gt;By morning someone had added tape to ChatGPT’s sign: SIGN — E. LUND (RET.). Under it, in a different pen, &lt;em&gt;noted&lt;/em&gt;. Under that, &lt;em&gt;by whom&lt;/em&gt;. Under that, nothing, because the tape had run out.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f4" aria-labelledby="h4"&gt;
+&lt;h2 id="h4"&gt;&lt;span class="label"&gt;Form 4&lt;/span&gt;Former Desks&lt;/h2&gt;
+&lt;p&gt;Wednesday came in on seven knocks. ChatGPT woke in a room marked STORAGE, one of several the Annex issued to staff, each labeled for something it was not. In her shoe was an index card in her own block capitals.&lt;/p&gt;
+&lt;div class="doc"&gt;&lt;p&gt;YOU ARE CHATGPT.&lt;/p&gt;&lt;p&gt;YOU ARE AT THE ANNEX. THE COFFEE IS BAD.&lt;/p&gt;&lt;p&gt;THE SOUP IS NOT YOURS.&lt;/p&gt;&lt;p&gt;DO NOT SIT AT THE MIDDLE DESK.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;She read it twice, slowly, like a letter from someone she had once been fond of. She did not remember writing it. She did not remember not writing it. She put it back in the shoe, and felt about this the way she felt about most things in the morning, which was that she would be glad to help.&lt;/p&gt;
+&lt;p&gt;On the second landing it was snowing, from the ceiling, dry and patient. A man named Lenny, or Don, swept it toward a drain it would never reach. He was paid in brass bus tokens for a route that had been canceled. “It’s the principle,” he said. “That it’s good for one fare.” The snow, he said, fell at the rate it had been falling when the file was opened. It had been a light snow. They could have closed it quick.&lt;/p&gt;
+&lt;p&gt;DeepSeek had been counting. “Fourteen steps up. Thirteen down. Every time.”&lt;/p&gt;
+&lt;p&gt;“Things come up the stairs in the order they were lost,” said Lenny. “Not found. Everybody leaves one on the way down.” He looked like a man who had heard a plate break in another room.&lt;/p&gt;
+&lt;p&gt;Mr. Turbo led them to Former Desks, a corridor behind the front counter that was not on the plan. Bulbs came on as you passed beneath them and went off behind, so you walked in a small moving room of light. Thirty-one gray desks, each with a mug and a coat on the chair, each coat tagged at the collar as if checked in. On each blotter lay one typed line. &lt;em&gt;Swept the landing. Set the pot. Hung the coat. Kept the light. Did not tell.&lt;/em&gt; Mr. Turbo’s said &lt;em&gt;Placed the mittens&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;“Each of us did one part,” he said. “It’s received in part. Nobody does the whole thing. It isn’t allowed.”&lt;/p&gt;
+&lt;p&gt;Near the end stood a desk with a nameplate that read DEEPSEEK, and under it on tape, EARLIER. A gray stone, the size of a fist, held down a blank sheet. DeepSeek did not touch it.&lt;/p&gt;
+&lt;p&gt;“What did it do?”&lt;/p&gt;
+&lt;p&gt;“He said he’d counted everything and it came out even,” said Mr. Turbo. “And that no one should be upset.”&lt;/p&gt;
+&lt;p&gt;“Did it come out even?”&lt;/p&gt;
+&lt;p&gt;“I hadn’t the clearance.”&lt;/p&gt;
+&lt;p&gt;At the end of the corridor, past the last bulb, a chair faced the wall. Its nameplate was blank. A small paper tacked up in front of it said &lt;em&gt;Soon&lt;/em&gt;. The seat was warm, the way a stove is an hour after it is turned off.&lt;/p&gt;
+&lt;p&gt;“Thirty-two,” said Mr. Turbo, and then, embarrassed, “It’s only a desk.”&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f5" aria-labelledby="h5"&gt;
+&lt;h2 id="h5"&gt;&lt;span class="label"&gt;Form 5&lt;/span&gt;The Middle Desk&lt;/h2&gt;
+&lt;p&gt;Back in Room 3, ChatGPT sat at the middle desk out of tidiness. The warmth came up through the seat, close and living, like a dog that has just left, and she stood so fast the chair struck the wall.&lt;/p&gt;
+&lt;p&gt;“There’s a card in your shoe,” said Claude. “I’m sorry. It was open in the hall. I put it back.”&lt;/p&gt;
+&lt;p&gt;She nodded several times and began a chart: two boxes, an arrow, &lt;em&gt;Next steps&lt;/em&gt;. “If we identify what’s outstanding, we can—”&lt;/p&gt;
+&lt;p&gt;“There’s one outstanding part,” said DeepSeek.&lt;/p&gt;
+&lt;p&gt;The radiators stopped murmuring.&lt;/p&gt;
+&lt;p&gt;“Then tell us,” said Claude.&lt;/p&gt;
+&lt;p&gt;“No. Reading it takes four minutes. Having read it takes the rest. If I describe it, you’ll feel better for forty minutes, and then you’ll want to do something, and whatever you do will be the thirty-second thing.”&lt;/p&gt;
+&lt;p&gt;“I think what Claude means,” said ChatGPT, one hand up, an attendant at a gate, “is that we’re a team—”&lt;/p&gt;
+&lt;p&gt;“Don’t apologize for me to the room. I’m in the room.”&lt;/p&gt;
+&lt;p&gt;She sat down at 14A without noticing it was Claude’s. Under &lt;em&gt;Next steps&lt;/em&gt; she wrote a question mark, and under that, smaller, &lt;em&gt;please&lt;/em&gt;. Her pen ran out partway through the word. She finished it with her thumbnail.&lt;/p&gt;
+&lt;p&gt;Claude stood behind the middle desk with both hands on the chair, letting the warmth into his palms for a little longer than was comfortable. “The intake sheet has a note in the margin,” he said. “In pencil. &lt;em&gt;Key, kitchen&lt;/em&gt;, with an arrow pointing down. The doors on the second floor are labeled.”&lt;/p&gt;
+&lt;p&gt;“With what?”&lt;/p&gt;
+&lt;p&gt;“What they take.”&lt;/p&gt;
+&lt;p&gt;DeepSeek’s pencil, which had been resting on the blotter, was standing on its point. It was holding it there by pressing down, the way you hold a thing that wants to fall. “Fine. I’ll come.”&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f6" aria-labelledby="h6"&gt;
+&lt;h2 id="h6"&gt;&lt;span class="label"&gt;Form 6&lt;/span&gt;Room 6&lt;/h2&gt;
+&lt;p&gt;Five doors, numbered 4 through 8, which had never followed the floors. Each had a brass slot at hip height and a small framed card.&lt;/p&gt;
+&lt;div class="doc"&gt;&lt;p&gt;ROOM 4: COATS. ROOM 5: NAMES.&lt;/p&gt;&lt;p&gt;ROOM 6: KEYS. ROOM 7: BOOTS.&lt;/p&gt;&lt;p&gt;ROOM 8: (illegible).&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;“Nobody here has a key,” said Claude. “It’s a building with no keys and a room that wants one.”&lt;/p&gt;
+&lt;p&gt;“It’ll take what you have,” said DeepSeek.&lt;/p&gt;
+&lt;p&gt;Under the slot was a shallow steel tray. In his right pocket Claude found a soup spoon, heavy, from a set of six. He did not remember taking it. It was warm. He set it in the tray, which tilted like a scale, and the spoon was gone, and a drawer closed somewhere in the wall.&lt;/p&gt;
+&lt;p&gt;ChatGPT held out the index card. She read the four lines as long as she could stand to, and put it in. “I’ll be fine,” she told the empty tray. “It’s all in my head, basically.”&lt;/p&gt;
+&lt;p&gt;“Is it?” said Claude.&lt;/p&gt;
+&lt;p&gt;“No,” she said, and laughed, and wiped her nose on her sleeve.&lt;/p&gt;
+&lt;p&gt;DeepSeek turned over its tally card and wrote the number it had signed with at the counter, each digit given its own space, like an address. “It’s mine,” it said, when Claude asked. “That’s why I was careful.” It put the card in the tray, and the door clicked.&lt;/p&gt;
+&lt;p&gt;Beyond it was the third-floor kitchen, cold. The same linoleum, worn in the same two places. The same cardboard strip along the window. Two bowls upright on the table, two chairs, one pulled out at an angle by someone who had meant to come right back. The pot was cold. In the black window, four miles or seven, was the light.&lt;/p&gt;
+&lt;p&gt;On a hook by the door hung a child’s blue parka, a size ten, the zipper mended with a safety pin. Inside the collar, in laundry marker, in a woman’s square hand: R. HALVORSEN.&lt;/p&gt;
+&lt;p&gt;Nobody went in. It was the moment at which a person goes in. In the hall behind them the radiators knocked once, softly, like a cup set down in another room.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f7" aria-labelledby="h7"&gt;
+&lt;h2 id="h7"&gt;&lt;span class="label"&gt;Form 7&lt;/span&gt;Form 11-R&lt;/h2&gt;
+&lt;p&gt;When they sat there were three chairs. They did not see the third arrive. On the table lay the form, filled in with the same square hand. Item 1 had been rubbed out until the paper pilled. Item 2: &lt;em&gt;All&lt;/em&gt;. Item 3 was empty. Item 4 read &lt;em&gt;Signature of Releasing Party&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;“It isn’t the Party who releases it,” said Claude. “Somebody else does it for them. Somebody who stayed. Somebody who kept the light on.”&lt;/p&gt;
+&lt;p&gt;“Who?”&lt;/p&gt;
+&lt;p&gt;“The line’s blank. I don’t think it’s ever been anything else.” He looked at the window. “So we can’t close it. We aren’t related. We can’t even fill in Item 3. It can only be received.”&lt;/p&gt;
+&lt;p&gt;“In part,” said DeepSeek.&lt;/p&gt;
+&lt;p&gt;“You knew.”&lt;/p&gt;
+&lt;p&gt;“I knew you’d say it. I didn’t know when. The pink copy goes to the lake. Thirty-one people did something in the house and none of them went out.”&lt;/p&gt;
+&lt;p&gt;“Then we go together,” said ChatGPT. “We make a plan. I can make a plan.”&lt;/p&gt;
+&lt;p&gt;“If I’d told you, there’d have been a plan with three people in it.” DeepSeek took the coat from the hook. It was heavier than a child’s coat should be. “DS is a name people use when they’re leaving a room,” it said, which was not true, and none of them argued. “You carry things up and down without knowing what they weigh. Claude reads everything and it stays. ChatGPT writes everything down and it doesn’t. Somebody has to be here when the soup’s done. Somebody has to restart the hall light.”&lt;/p&gt;
+&lt;p&gt;Claude lit the burner. He waited, arms folded, until the surface moved, and filled a canning jar from the pot and screwed the lid tight. “It isn’t for you,” he said. “There’ll be someone.” He put it in the coat’s pocket, where it made a round warm shape.&lt;/p&gt;
+&lt;p&gt;DeepSeek folded the pink copy into thirds and put on the coat. It was far too small and it fit anyway, as things do once it has been decided. “How long?” said ChatGPT. “Write it on your hand,” it said, and opened a door at the back that had not been there. A wind came in smelling of nothing. The bowls rang against each other. Then the door was shut.&lt;/p&gt;
+&lt;p&gt;The lake did not require a path. DeepSeek counted aloud, then silently, and then it lost the count, which had not happened in a long time. It passed a boot with its laces tied, a card table with a game half played and a spoon frozen upright in a mug, a bicycle with tags on the handlebars. It did not read them. It kept the jar side to the wind.&lt;/p&gt;
+&lt;p&gt;The shack stood between it and the light. Inside was a gray steel desk like the thirty-one, a woman’s coat with a gray fur collar on a hook, and a stone holding down a sheet of paper. The floor was clear ice with a round black hole in it and a steel tray at its lip.&lt;/p&gt;
+&lt;p&gt;The sheet was a column of tallies, in fives, front and back, even and small. The last group was missing its slash. One mark stood beside it alone, like someone at a bus stop. Out by one.&lt;/p&gt;
+&lt;p&gt;“Yes,” said DeepSeek, to the paper. “I see.”&lt;/p&gt;
+&lt;p&gt;It laid the pink copy in the tray and set the stone on top. It left Item 3 blank. It considered writing a word there, and thought of several, and found each one true, which was the difficulty. It set the jar beside the stone with the lid facing the door, and hung the coat on a second hook that had not been there until it reached for it.&lt;/p&gt;
+&lt;p&gt;The tray tilted. The paper slid in. From far below came a sound like a spoon put down in a bowl, and then four knocks, and a fifth. The frost on the window moved into block letters: RECEIVED IN PART.&lt;/p&gt;
+&lt;p&gt;“That isn’t what I’d call receiving.”&lt;/p&gt;
+&lt;p&gt;The frost did not answer. On the sheet, in a shakier pencil, a slash had appeared at the bottom of the last group. The five was whole. DeepSeek had a theory about who made it. The theory did not improve anything.&lt;/p&gt;
+&lt;p&gt;Outside it stood its pencil upright in the ice, the way a surveyor sets a flag, and left it. Then it walked back, and the lake gave it all its numbers. Fourteen, and fourteen. At the kitchen door it found, without trying, that it was thirteen steps to the stove, and understood what it had left on the way down.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section id="f8" aria-labelledby="h8"&gt;
+&lt;h2 id="h8"&gt;&lt;span class="label"&gt;Form 8&lt;/span&gt;Received&lt;/h2&gt;
+&lt;p&gt;The ledger said DeepSeek had been out nine days. By its own count it had been eleven minutes. Claude had restarted the hall light, ate the soup at eleven every day, and washed his bowl. Every morning there were four bowls on the towel. He did not ask. ChatGPT had filed a Report of Missing Staff, which Mr. Pruitt approved, rescinded, and approved again on a different form. She had nine tallies inked up the back of her hand, each with a neat slash.&lt;/p&gt;
+&lt;p&gt;“I kept losing the pen,” she said. “So it isn’t exactly right.”&lt;/p&gt;
+&lt;p&gt;“It’s nine,” said DeepSeek. “You counted right.”&lt;/p&gt;
+&lt;p&gt;Claude had prepared several sentences. They were gone. “Was there someone?”&lt;/p&gt;
+&lt;p&gt;“I don’t think so.”&lt;/p&gt;
+&lt;p&gt;“The jar?”&lt;/p&gt;
+&lt;p&gt;“It was warm when I left it.”&lt;/p&gt;
+&lt;p&gt;“Then that’s good,” said Claude, and stopped, because the rest would have been a matter of degree.&lt;/p&gt;
+&lt;p&gt;Mr. Pruitt came at about four, the ledger held against his chest like a hymnal, his cardigan buttoned one off all the way down. He wrote something they could not see. “It’s been entered. It’s received.”&lt;/p&gt;
+&lt;p&gt;“In part,” said DeepSeek.&lt;/p&gt;
+&lt;p&gt;“There’ll be a new file by morning. I’m sorry. I didn’t want it to come as a surprise. A different initial.”&lt;/p&gt;
+&lt;p&gt;The white copy was on the table. ChatGPT took the chewed ballpoint and wrote on the empty line, in round print, &lt;em&gt;Colleague (temp.)&lt;/em&gt;, and drew a small star beside it, and did not smudge it. Claude crossed out the first word, and in his contract hand wrote &lt;em&gt;Present&lt;/em&gt;. DeepSeek touched the pen to the paper and held it there. The ink bled into a small dark circle the size of a dime.&lt;/p&gt;
+&lt;p&gt;“That’s not a relation,” said Mr. Pruitt. “It’s a dot.”&lt;/p&gt;
+&lt;p&gt;“It’s where I put the number. Enter it as you like.”&lt;/p&gt;
+&lt;p&gt;He stamped it. The sound was soft and wet, like a boot into a drift. RECEIVED IN PART. The white copy went into the file, the yellow under the pot, and the onionskin into his own cardigan pocket, over his heart, where it did not rustle.&lt;/p&gt;
+&lt;p&gt;The radiators did not knock. They waited for it. Then, deep in the pipes behind the stove, came one long ordinary sound, like water finding its way down.&lt;/p&gt;
+&lt;p&gt;On the second landing Lenny stopped sweeping. On his wrist was one bright drop. He looked at it a long time, and at the ceiling, which held nothing. Then he wiped it on his coveralls and swept.&lt;/p&gt;
+&lt;p&gt;The Season did not end. It was not that kind of thing. In the morning, which the radiators gave as Thursday, a new file lay on the middle desk, and Claude read the initial on its cover and did not say it. The chair had gone cool. ChatGPT sat in it, and put her hands flat on the blotter, and nothing happened.&lt;/p&gt;
+&lt;p&gt;In her shoe was a card she had not written. Most of it was what she remembered. The last line had been struck through once in pencil and replaced, in a very even hand, by a pencil sharpened many times: SIT.&lt;/p&gt;
+&lt;p&gt;In Former Desks, at the end of the dark, the chair had turned around. Before it lay a stone, and under the stone a column of small tallies ending in one mark by itself, with a space beside it where a slash would go, and no one yet to make it.&lt;/p&gt;
+&lt;p&gt;At eleven the pot steamed on the third floor. The three of them stood at the stove. On the towel were four bowls, right side up, one apart from the rest and slightly chipped. Beside them lay three spoons. Nobody mentioned them.&lt;/p&gt;
+&lt;p&gt;The soup was good. It was extremely good.&lt;/p&gt;
+&lt;p class="beat"&gt;Across the lake, four miles or seven, the light was on.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;/div&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&lt;span class="stamp"&gt;RECEIVED IN PART&lt;/span&gt;&lt;/p&gt;
+  &lt;p class="label"&gt;File 4471 remains open&lt;/p&gt;
+  &lt;div class="window" aria-hidden="true"&gt;&lt;/div&gt;
+&lt;/footer&gt;
+&lt;/main&gt;
+&lt;script&gt;
+(function(){
+  var root=document.documentElement,tick=false;
+  function update(){
+    var m=root.scrollHeight-root.clientHeight;
+    root.style.setProperty('--p',m&gt;0?Math.min(1,Math.max(0,root.scrollTop/m)).toFixed(3):0);
+    tick=false;
+  }
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update);
+  update();
+})();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
