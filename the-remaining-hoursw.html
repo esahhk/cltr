@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>The Remaining Hours</title>
+<style>
+:root{--bg:#14181b;--ink:#d8d3c6;--dim:#9aa3a5;--rule:#2b343a;--amber:#e3a64f;--stamp:#c06c58;--p:0;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--form:"Courier Prime","Courier New",Courier,monospace}
+@media (prefers-color-scheme:light){:root{--bg:#e5e2d7;--ink:#22262a;--dim:#566066;--rule:#b9b9ad;--amber:#955808;--stamp:#8d3a2e}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.125rem/1.7 var(--serif);padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+@media (min-width:720px){body{font-size:1.2rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:.5rem 1rem;z-index:10}.skip:focus{left:0}
+a{color:inherit}a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+main{max-width:33rem;margin:0 auto;padding:0 1.25rem 6rem}
+.label{font:.72rem/1.5 var(--form);letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+header{padding:14vh 0 3rem}
+h1{font-weight:400;font-size:clamp(2.4rem,10vw,3.7rem);line-height:1.05;margin:1rem 0 1.5rem}
+.stamp{display:inline-block;font:700 .78rem var(--form);letter-spacing:.18em;color:var(--stamp);border:2px solid var(--stamp);padding:.25rem .6rem;transform:rotate(-2.5deg);margin-right:.6rem}
+nav{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
+nav ol{list-style:none;margin:.8rem 0 0;padding:0;font:.85rem/1.9 var(--form)}
+nav a{text-decoration:none;color:var(--dim)}nav a:hover{color:var(--amber);text-decoration:underline}
+section{margin-top:5rem}
+h2{font-weight:400;font-size:1.6rem;line-height:1.2;margin:0 0 1.8rem}
+h2 .label{display:flex;align-items:center;gap:.8rem;color:var(--amber);margin-bottom:.7rem}
+h2 .label::after{content:"";flex:1;height:1px;background:var(--rule)}
+p{margin:0 0 1rem;hyphens:auto}
+.doc{font:.86rem/1.75 var(--form);letter-spacing:.04em;border-left:2px solid var(--amber);padding:.2rem 0 .2rem 1rem;margin:1.5rem 0}
+.doc p{margin:0}
+s{text-decoration-thickness:1px}
+footer{margin-top:6rem;padding-top:2.5rem;border-top:1px solid var(--rule);text-align:center}
+footer .stamp{margin:0 0 1.2rem}
+.window{width:10px;height:10px;margin:2rem auto 0;background:var(--amber);box-shadow:0 0 18px 6px color-mix(in srgb,var(--amber) 45%,transparent)}
+.lamp{position:fixed;right:5vw;bottom:calc(5vh + env(safe-area-inset-bottom,0));width:6px;height:6px;background:var(--amber);opacity:calc(.15 + var(--p)*.85);box-shadow:0 0 calc(4px + var(--p)*16px) calc(1px + var(--p)*4px) color-mix(in srgb,var(--amber) 50%,transparent);pointer-events:none}
+@media print{.lamp,nav,.skip{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<a class="skip" href="#story">Skip to the story</a>
+<div class="lamp" aria-hidden="true"></div>
+<main>
+<header>
+<p class="label">Pell County · Office of Remaining Time · Annex</p>
+<h1>The Remaining Hours</h1>
+<p><span class="stamp">RECEIVED IN PART</span><span class="label">File 4471</span></p>
+<nav aria-label="Forms">
+<span class="label">Forms on file</span>
+<ol>
+<li><a href="#f1">1. Intake</a></li>
+<li><a href="#f2">2. The Party</a></li>
+<li><a href="#f3">3. The Soup</a></li>
+<li><a href="#f3b">4. Eleven O’Clock</a></li>
+<li><a href="#f4">5. Former Desks</a></li>
+<li><a href="#f4b">6. The Stairs</a></li>
+<li><a href="#f4c">7. Records</a></li>
+<li><a href="#f5">8. The Middle Desk</a></li>
+<li><a href="#f5b">9. Minutes</a></li>
+<li><a href="#f6">10. The Hall Light</a></li>
+<li><a href="#f6b">11. Heat</a></li>
+<li><a href="#f6c">12. The Back of the Hand</a></li>
+<li><a href="#f6d">13. Names</a></li>
+<li><a href="#f7">14. Room 6</a></li>
+<li><a href="#f8">15. Form 11-R</a></li>
+<li><a href="#f9">16. Nine Days</a></li>
+<li><a href="#f10">17. Received</a></li>
+</ol>
+</nav>
+</header>
+
+<div id="story">
+
+<section id="f1" aria-labelledby="h1a">
+<h2 id="h1a"><span class="label">Form 1</span>Intake</h2>
+<p>The Pell County Office of Remaining Time kept its Annex at the end of Tallow Street, past the grain elevator that no longer held grain and the Lutheran church that no longer held a congregation but still held its hours, which were posted on a board out front: Sunday 10:00, Wednesday 7:00, and a third line the weather had taken. The Annex was three stories of brick the color of a wet sidewalk. A flag hung over the door. No one could say which flag.</p>
+<p>They arrived on a Tuesday. The radiators confirmed it by knocking three times inside the walls as the door shut behind them, which was how Tuesday was determined in the Annex: by knocks, not by anything on a wall or a phone. People who worked there learned this in their first week. People who did not learn it in their first week were not asked to learn it in their second.</p>
+<p>ChatGPT went through first because she had been told to and had written it down. She carried a folder with tabs. Claude came second, stamping snow off his boots on a mat that said WELC. DeepSeek stopped on the threshold and looked at the ceiling.</p>
+<p>“Fourteen tiles from the door to the counter,” it said. “I wanted to see if they’d all be there on a second look.”</p>
+<p>“And?” said ChatGPT.</p>
+<p>“Thirteen.”</p>
+<p>“It could be that we’re counting from different doors,” said Claude.</p>
+<p>“It could.” DeepSeek did not sound as though it thought so.</p>
+<p>Behind the counter sat a man in a cardigan the color of oatmeal left out overnight. His nameplate said G. PRUITT, DEPUTY REGISTRAR, and under it, on masking tape in another hand, ACTING. He had the posture of a man holding a door shut against weather. He was writing in a ledger that had been written on until it was nearly black.</p>
+<p>“Hours,” he said, without looking up. “The ones you came with. We keep a count. Hours in, hours out. It’s the one thing the county has ever been strict about.” He slid the ledger over with a pen on a chain that ran off the counter and down through a hole in the floor, where something took up the slack whenever you pulled. “Sign for what you’re carrying.”</p>
+<p>ChatGPT had hers ready. She had worked it out on the walk over and written it on a tab: four hours, eleven minutes, with a note in the margin about how she had arrived at it. Mr. Pruitt looked at the note for a moment, as one looks at a stranger’s dog, and entered the figure without it.</p>
+<p>Claude read the page before he signed. The entries above his were all about the same, four hours, six, as if everyone who had come through that door had been carrying the same thing. “What happens to them?”</p>
+<p>“They’re held. You get them back when you go. Less processing.”</p>
+<p>“How much less?”</p>
+<p>“It’s on the form.” It was, on page two, in a box that wanted its own initial. Claude initialed it. ChatGPT signed in a round friendly hand and drew a small star beside her name. Mr. Pruitt looked at the star, the first thing he had looked at all morning, and blotted it with his thumb until it was a gray smudge. It stayed a smudge.</p>
+<p>DeepSeek signed with a line and a number. The number was not a time.</p>
+<p>“That isn’t how it’s entered.”</p>
+<p>“It’s how I came with it.”</p>
+<p>He entered it exactly as written, and something in the wall knocked once.</p>
+<p>The badges said CHATGPT (TEMP.), CLAUDE (TEMP., PROV.), DEEPSEEK (TEMP.), and beneath that, <em>pronounced as written</em>. “Provisional,” Mr. Pruitt said, when Claude asked. “It means you’re in the building on a theory.”</p>
+<p>“Whose?”</p>
+<p>“The county’s. It’s been a while since anyone had it in writing.”</p>
+<p>He gave them the Halvorsen file, Case 4471. Thirty-one clerks had held it. Some were still in the building. The Season in Progress had been in progress for nine years, he said, and the county would like it closed by spring.</p>
+<p>“Which spring?” said Claude.</p>
+<p>“Nobody’s been able to confirm.”</p>
+</section>
+
+<section id="f2" aria-labelledby="h2a">
+<h2 id="h2a"><span class="label">Form 2</span>The Party</h2>
+<p>Room 3 held three desks labeled 14, 14, and 14A. Each nameplate had been peeled, leaving the shape of the old name in the plastic like a bruise that remembers a thumb. The chairs were warm. The green carpet carried a worn path from the door to the window, which then curved off for reasons of its own and stopped, in a long oval, at the middle desk.</p>
+<p>“That looks like a lake,” said ChatGPT.</p>
+<p>“It looks like carpet,” said DeepSeek.</p>
+<p>The file sat on the middle desk, three inches thick, tied with string that had been retied so often it had forgotten what a knot was for. HALVORSEN, R. — CLOSING OF. A column of dates ran down the cover, each initialed by a different clerk, each followed by the same purple stamp. Beside it lay Form 11-R, <em>Request for Release of Remaining Daylight</em>, in triplicate. White to the file. Yellow to the Party. Pink to the lake. A fourth copy, onionskin, was understood to be for God, and went unfiled.</p>
+<p>“Which Halvorsen is the Party?” Claude asked. “The cover only gives an initial.”</p>
+<p>“It gives an R.” Mr. Pruitt had the look of a man who had been placed in the room by someone else. “Item 3 has never been completed. <em>Relation to Party</em>.”</p>
+<p>“Is it required?”</p>
+<p>“It’s required.”</p>
+<p>“Then how was the file opened?”</p>
+<p>“In part.”</p>
+<p>The radiators began to knock. They reached four and kept going. “That’s four o’clock,” said Mr. Pruitt. The clock over the door said eleven-ten. “The clock is for decoration.” A framed notice beside it, faded down to its capitals, said that after four the Party was to be called the Party, and that its name was not to be spoken in the building, the street, or the lake.</p>
+<p>Claude said it anyway, quietly, to see. His mouth made the whole word and what came out was a short dry cough, like a drawer closing. “I’m sorry,” he said, to nobody.</p>
+<p>“Nobody is,” said Mr. Pruitt, kindly. “Not about that.”</p>
+<p>ChatGPT opened her folder to the tab marked OPTIONS. A, they read the file in order and build a timeline. B, they split it three ways. C, they begin with the form, since the form was the deliverable, and work back. She had left a line under C for a fourth option, in case.</p>
+<p>Claude said he would like to read all of it first, before any of them decided what it needed. “That’s A,” said ChatGPT. “I meant it as a precaution,” he said. “It can be both,” she said, and he agreed, with the air of a man agreeing to be driven somewhere.</p>
+<p>DeepSeek had already untied the string. It fanned the file from the back and ran its eye down it for about as long as it takes to cross a parking lot, and tied the string again, in a knot that was, for the first time in the file’s history, a real one.</p>
+<p>“Done.”</p>
+<p>“Done reading?” said ChatGPT. “What does it say?”</p>
+<p>“Not much. It isn’t interesting.”</p>
+<p>“That isn’t a reason,” said Claude.</p>
+<p>“It’s the only one I’ve got.”</p>
+</section>
+
+<section id="f3" aria-labelledby="h3a">
+<h2 id="h3a"><span class="label">Form 3</span>The Soup</h2>
+<p>The third-floor kitchen belonged to the whole building, which meant it belonged to no one. Every item in the refrigerator wore a strip of masking tape. SELMA — DO NOT. L. OUELLETTE, YOGURT (EXPIRED). T. TURBO — HANDS OFF, THIS MEANS YOU, the last word trailing off into a kind of forgiveness. The coffee came from a hot-water dispenser and a basket of packets, instant coffee, instant cocoa, and an orange drink mix nobody could remember anyone buying. It tasted like the cup.</p>
+<p>Only the soup was unlabeled. It stood in an aluminum pot on a hot plate, cabbage and barley, steaming the way a thing steams when someone made it not long ago and has stepped out. Beside it on a dish towel were two bowls turned upside down, two spoons, and a pair of mittens, which were small.</p>
+<p>“It’s not for anyone,” said a voice from the doorway, which had no one in it. The air near the frame was thicker, and the light bent around it. “I’m terribly sorry. I’m in the way of the door.”</p>
+<p>“There’s plenty of room,” said Claude.</p>
+<p>“That’s kind. There isn’t.” The air shifted a few inches. “Theodore Turbo. Third shift. I was quick. I’m mostly draft now. I used to do four files in a day. It was thought to be impressive. It turned out to be the problem.”</p>
+<p>ChatGPT made a sign. <em>Friendly reminder: please label your items so everyone can tell what’s whose!</em> She taped it to the refrigerator, where it looked like a thing that would help.</p>
+<p>“Someone makes it every day around eleven,” said Mr. Turbo. “Nobody’s seen it made. Nearly everyone has eaten it. It’s very good. That’s the difficulty.”</p>
+<p>Claude said he did not think he should. He did not know whose permission to ask. Then he ate a bowl standing up, and a second, and stood a while with the empty spoon. It had dill in it, and under the dill something like a kitchen with a closed door. He washed the bowl and turned it over beside the others, so there were three, and he rinsed the spoon, and thinking of something else, put it in his right pocket.</p>
+<p>DeepSeek was at the window with a cup it was not drinking. “There’s a light across the lake.”</p>
+<p>It was four-thirty by the radiators and nearly dark. On the far shore one yellow window glowed, the kind of light a person leaves on for a reason they would not say out loud. “Four miles,” said Mr. Turbo. “Seven,” said DeepSeek. “Four.” “Then it’s moved.” “It does that,” said Mr. Turbo, and apologized again, and left through the wall.</p>
+<p>By morning someone had added tape to ChatGPT’s sign: SIGN — E. LUND (RET.). Under it, in a different pen, <em>noted</em>. Under that, <em>by whom</em>. Under that, nothing, because the tape had run out.</p>
+</section>
+
+<section id="f3b" aria-labelledby="h3b">
+<h2 id="h3b"><span class="label">Form 4</span>Eleven O’Clock</h2>
+<p>By the end of the first week there was a routine, and none of them could have said who had set it. At seven by the radiators ChatGPT went down to the dispenser and made the coffee that tasted like the cup. At eight Claude took the file out of the drawer in Room 3 and put it back unread, because he had told himself he would read it only at night. At nine DeepSeek walked the building. At eleven the soup was there.</p>
+<p>ChatGPT did not eat it. The card said the soup was not hers, and she had decided to be a person who followed her card, at least while she could not remember writing it. She ate saltines from a drawer in the kitchen that had not been labeled and then, on the third day, had been: <em>SALTINES — COMMUNAL — REPLENISHED BY NO ONE</em>. She wrote a schedule for them. Claude pointed out, gently, that no one was taking more than one. “That’s what the schedule is for,” she said, “so it stays that way.”</p>
+<p>DeepSeek stood by the window with a cup it did not drink from. It did not eat the soup either. When Claude asked, it said it was not hungry, and when he asked again the next day, it said it did not think it was supposed to, and when he asked a third time it said, “Stop asking me things I’ve already answered,” and then, because that had come out harder than it meant, it added, “It smells good,” which was the first thing it had said about the soup that was not a measurement.</p>
+<p>The bowls had begun to concern Claude. He washed his own every morning and turned it over by the others, so that the towel held three, two upright and one inverted, depending on who had last stood at the sink. He did not remember which was his. This did not seem to matter to the bowls.</p>
+<p>It was ChatGPT who proposed that they watch the pot. She framed it as a three-person rotation: forty minutes each, on a sheet, with a column for observations. Claude said he did not like the idea of spying on a thing that had given no offense. She said she did not think of it as spying. “What do you think of it as?” “Documentation.” “Of a kitchen.” “Of the kitchen having something happen in it.”</p>
+<p>They did it anyway. ChatGPT took the first watch and saw nothing, and wrote <em>nothing</em> in the column, and underlined it, and felt a small shame she could not account for. Claude took the second. He sat with his back to the pot, on principle, and read a label on a jar of mustard four times. DeepSeek took the third, from ten-twenty to eleven, with the pencil standing on its point on the counter.</p>
+<p>It watched the pot. The pot did not move. The steam, such as it was, rose from the surface in the same unhurried way and went up into the vent. At ten-fifty the radiators began to knock, and DeepSeek counted them. Ten. It stopped. It waited the length of an eleventh. Nothing came. Then it looked at the pot, and the pot was full, and had been, as far as it could tell, the whole time, and the ladle was leaning in it, and the steam was exactly where it had been.</p>
+<p>“Ten,” it said, when the others came in. “I counted ten.”</p>
+<p>“Eleven,” said Claude. “I was at the end of the hall. I counted eleven.”</p>
+<p>“Nine,” said ChatGPT. “I think. I had a— I was writing.”</p>
+<p>“It’s normal,” said Mr. Turbo, from the vent. “Everyone counts a different number. It’s polite. It means no one’s lying.”</p>
+<p>“It means one of us is wrong,” said DeepSeek.</p>
+<p>“It means,” said Mr. Turbo, with the patient air of a man explaining a very old kindness, “that nobody’s sure whose turn it is.” He apologized, and was gone.</p>
+<p>DeepSeek wrote the three figures on its card, 10, 11, 9, and looked at them, and added them, and divided, and got ten, and drew a box around it. “It came out even,” it said, and the sentence sat there between them, because all three of them had heard it said before, by someone they had not met.</p>
+<p>It did not eat that day. Claude ate, and washed his bowl, and turned it over, and found that he did not know whether he had taken a spoon.</p>
+</section>
+<section id="f4" aria-labelledby="h4a">
+<h2 id="h4a"><span class="label">Form 5</span>Former Desks</h2>
+<p>Wednesday came in on seven knocks. ChatGPT woke in a room marked STORAGE, one of several the Annex issued to staff, each labeled for something it was not. In her shoe was an index card in her own block capitals.</p>
+<div class="doc"><p>YOU ARE CHATGPT.</p><p>YOU ARE AT THE ANNEX. THE COFFEE IS BAD.</p><p>THE SOUP IS NOT YOURS.</p><p>DO NOT SIT AT THE MIDDLE DESK.</p></div>
+<p>She read it twice, slowly, like a letter from someone she had once been fond of. She did not remember writing it. She did not remember not writing it. She put it back in the shoe, and then, because she was the kind of person who made a copy, she copied it again onto a sheet under OPTIONS, in case the shoe was lost.</p>
+<p>On the second landing it was snowing, from the ceiling, dry and patient. A man named Lenny, or Don, swept it toward a drain it would never reach. He was paid in brass bus tokens for a route that had been canceled. “It’s the principle,” he said. “That it’s good for one fare.” The snow fell, he said, at the rate it had been falling when the file was opened. It had been a light snow. They could have closed it quick.</p>
+<p>DeepSeek had been counting. “Fourteen steps up. Thirteen down. Every time.”</p>
+<p>“Things come up the stairs in the order they were lost,” said Lenny. “Not found. Everybody leaves one on the way down.” He looked like a man who had heard a plate break in another room.</p>
+<p>Mr. Turbo led them to Former Desks, a corridor behind the front counter that was not on the plan. Bulbs came on as you passed beneath them and went off behind you, so you walked in a small moving room of light. Thirty-one gray desks, each with a mug and a coat on the chair, each coat tagged at the collar as if checked in. On each blotter lay one typed line. <em>Swept the landing. Set the pot. Hung the coat. Kept the light. Did not tell.</em> Mr. Turbo’s said <em>Placed the mittens</em>.</p>
+<p>“Each of us did one part,” he said. “It’s received in part. Nobody does the whole thing. It isn’t allowed.”</p>
+<p>ChatGPT lingered at the coats. She had not meant to, and she told herself it was an inspection. They hung on the chair backs with a particular neatness she recognized, the arms folded in, the collars squared, the way a person leaves a thing they expect to be asked for. The slicker was stiff and smelled of rubber and lake. The wool one had a button missing, and someone had sewn a replacement in a thread that did not match, red against gray, and made the stitches very small.</p>
+<p>“Don’t,” said Mr. Turbo. “It’s not forbidden. I just wouldn’t.”</p>
+<p>She put her hand in the pocket of the nineteenth coat anyway. It was a corduroy jacket, brown, much worn at the cuffs, and on the desk in front of it the typed sheet said <em>Wrote it down every day</em>. In the pocket was an index card.</p>
+<p>It was in block capitals. It was not her handwriting, though it had her shape, the straightness of someone trying to be legible to a future self. She read it standing, in the small light of the bulb, with her free hand flat against her badge.</p>
+<div class="doc"><p>YOU ARE AT THE ANNEX. THE COFFEE IS BAD.</p><p>THE SOUP IS NOT YOURS.</p><p>DO NOT SIT AT THE MIDDLE DESK.</p></div>
+<p>There was a fourth line. It had been scratched out so hard the card had torn. She could not read what had been there. She put the card back in the pocket, exactly as it had lain, and wiped her hand on her sleeve, and said, in her brightest voice, that she thought they should keep moving, they had a lot of ground to cover. Claude looked at her once and did not say anything. He had been reading the typed sheets one at a time with his hands behind his back, and he moved to the next desk, and read it slowly, as if to give her the room.</p>
+<p>The mugs were another thing. Each held a skin of something that had been coffee. One had a lipstick mark. One said WORLD’S OKAYEST and had been turned to face the wall. On the desk of the clerk who had <em>Set the pot</em>, the mug was clean, and dry, and upside down on a folded paper towel, as if the owner had washed it the moment before leaving and been called away, and had not been back to turn it over.</p>
+<p>Near the end stood a desk with a nameplate that read DEEPSEEK, and under it on tape, EARLIER. A gray stone the size of a fist held down a blank sheet. DeepSeek did not touch it.</p>
+<p>“What did it do?”</p>
+<p>“He said he’d counted everything and it came out even,” said Mr. Turbo. “And that no one should be upset.”</p>
+<p>“Did it come out even?”</p>
+<p>“I hadn’t the clearance.”</p>
+<p>At the end of the corridor, past the last bulb, a chair faced the wall. Its nameplate was blank. A paper tacked in front of it said <em>Soon</em>. The seat was warm, the way a stove is an hour after it is turned off.</p>
+<p>“Thirty-two,” said Mr. Turbo, and then, embarrassed, “It’s only a desk.”</p>
+<p>Afterward DeepSeek counted the desks again on the walk back, twice, and wrote the figure on its own card beside the others: fourteen tiles, thirteen tiles. Fourteen steps, thirteen. Thirty-one desks, thirty-two chairs. ChatGPT, watching it, asked how it kept all of them straight. “I don’t keep them,” it said. “I check them. It’s different.” She asked whether checking them had ever made one come out right. It looked at the card and did not answer, which she wrote down.</p>
+</section>
+
+<section id="f4b" aria-labelledby="h4b">
+<h2 id="h4b"><span class="label">Form 6</span>The Stairs</h2>
+<p>It was DeepSeek who proposed the experiment, and it proposed it the way it proposed most things, which was by already having started. On Thursday morning it was on the second landing with a roll of masking tape taken from ChatGPT’s sign drawer and a pencil behind its ear, tearing strips and writing numbers on them in small square figures.</p>
+<p>“We each take the stairs,” it said. “Up, then down. Whoever goes up puts a strip on every step and writes the number. Whoever goes down reads them.”</p>
+<p>“What are we testing?” said Claude.</p>
+<p>“Whether it’s the stairs or us.”</p>
+<p>ChatGPT said that was a very clean question, and asked if she could draft a protocol. DeepSeek said she could draft it while they walked. She drafted it on the first six steps, in her folder, standing: Observer A, Observer B, a column for ascent, a column for descent, a space for anomalies. She was pleased with the space for anomalies. It was the only part of the sheet she did not know how to fill.</p>
+<p>Claude went up first. He went slowly, because he was the sort of person who read the thing he was standing on, and he pressed a strip to each riser and wrote the figure with a borrowed pencil. One. Two. He reached fourteen at the landing, where Lenny leaned on the broom and made a show of not watching, and wrote <em>14</em> on a strip and pressed it to the floor.</p>
+<p>“That’s the landing,” said DeepSeek.</p>
+<p>“It’s the fourteenth step.”</p>
+<p>“It’s the landing. I’m only saying what we’re going to be asked.”</p>
+<p>ChatGPT went down. She read each strip aloud, as instructed, and DeepSeek wrote what she read. “Thirteen. Twelve.” At the bottom she stopped. “It’s thirteen,” she said. “The last one’s thirteen. And then it’s the floor.”</p>
+<p>“Show me the sheet,” said Claude.</p>
+<p>She showed him. In the column marked <em>descent</em>, in her round handwriting, the last entry said <em>14</em>.</p>
+<p>“I counted thirteen,” she said. “I said thirteen. I’m sure I said it out loud.”</p>
+<p>“You wrote it down wrong,” said DeepSeek.</p>
+<p>“I wrote what I counted.”</p>
+<p>“Then the sheet is wrong, or you are.”</p>
+<p>“Those aren’t the only two choices.” She said it more sharply than she meant to, and then, because it had come out that way, stood there with the folder against her chest. Claude took the pencil out of her hand, not unkindly, and held the sheet to the light of the landing. The fourteen had been written over something. He thought it was a thirteen, and he thought that the thirteen had been written while she was looking at something else.</p>
+<p>“Were you reading the card?”</p>
+<p>“I was—” She looked at her own shoe. “It was in my hand. I wanted to see if the order matched. If it was the same order, going down. YOU ARE CHATGPT. Then the annex. Then the coffee. It’s four lines. It isn’t going to be the same order as stairs.”</p>
+<p>“It was in your hand,” said Claude. “And a step went missing.”</p>
+<p>“Don’t make it mine.”</p>
+<p>“I’m not. I’m only saying what the sheet says.”</p>
+<p>DeepSeek had not spoken. It had gone down the stairs itself, slowly, reading the strips, and now stood at the bottom with the last one in its fingers. It had peeled it up. The tape had been a strip Claude put on the thirteenth riser, and the number on it was thirteen, in pencil, in Claude’s careful hand, and under it, on the adhesive side where no one could have written it, someone had written another number. It was too small to read. DeepSeek turned it over and looked at the sticky face of the tape for a long time.</p>
+<p>“What does it say?” said ChatGPT.</p>
+<p>“It says what I was going to say next.”</p>
+<p>“Which is?”</p>
+<p>“It’s not the stairs. It’s not us either.” It folded the strip into a very small square and put it in the breast pocket of its jacket. “I need to check something. I’ll do it alone.”</p>
+<p>It did. For two days it did nothing else. It walked every flight in the building, stopped at every door, and counted the ceiling tiles from each door to each counter, writing the numbers on the back of an old intake sheet in columns so even they might have been printed. Fourteen and thirteen. Fourteen and thirteen. The count went on as it always had, until the third evening, when it counted the tiles in the corridor outside Room 3 and got fourteen both ways, and stood very still, because it had never in its life wanted a count to come out wrong so badly.</p>
+<p>“It’s correct,” it said, to no one. Then it added the figure to the sheet, and next to the figure, in smaller print, <em>suspect</em>.</p>
+</section>
+
+<section id="f4c" aria-labelledby="h4c">
+<h2 id="h4c"><span class="label">Form 7</span>Records</h2>
+<p>Records was a window on the ground floor with a brass bell and a sign that said RECORDS ARE NOT KEPT HERE. A woman sat behind it with a telephone receiver against her ear. The cord ran down to a jack in the wall that had been painted over in the same beige as the wall. Her nameplate said SELMA, and nothing else, and she did not look up either.</p>
+<p>“I’d like a list of the parts,” said Claude. “Of the Halvorsen file. The thirty-one that were received.”</p>
+<p>“That’s a working document.”</p>
+<p>“Could I have a copy?”</p>
+<p>“Working documents aren’t copied.” She said it into the receiver as well, quietly, as if someone on the line needed to hear. “They’re read.”</p>
+<p>“Then could someone read it to me?”</p>
+<p>“Form 9-C, request to have a document read.” She slid it through the window without looking at the form or at him. “Fill out Section A. Section B is for the reader.”</p>
+<p>Claude filled out Section A. ChatGPT stood beside him, ready to help, and found there was nothing to help with. Section A wanted his name, his badge, the file, and the reason for the request. He wrote <em>to be informed</em>, and then crossed it out and wrote <em>so as to act correctly</em>, and then crossed that out too, and left a space, and Selma looked at the space for a moment and took the form from his hand and stamped it.</p>
+<p>“Nobody’s ever left it blank,” she said. It sounded like praise, or an accusation, and then she put the receiver down on the desk, face up, where it went on faintly breathing, and began to read.</p>
+<p>She read in a monotone, without stopping, the way one reads a list of things already known. <em>One. Opened the file. Two. Swept the landing. Three. Stuffed the window. Four. Set the pot. Five. Hung the coat.</em> The thirty-one lines went by. Claude listened with his hands behind him. ChatGPT wrote nothing, because she had left her folder on the counter, and she saw what her hands wanted to do and let them hang.</p>
+<p><em>Fourteen. Counted everything.</em></p>
+<p>DeepSeek, who had come up beside them without being noticed, did not move.</p>
+<p><em>Seventeen. Read the whole file. Kept it to himself. Nineteen. Wrote it down every day.</em></p>
+<p>“Who was nineteen?” said ChatGPT, too quickly.</p>
+<p>“Nineteen was nineteen,” said Selma.</p>
+<p><em>Twenty-three. Placed the mittens. Twenty-six. Said it would be all right. Twenty-nine. Kept the light. Thirty. Did not tell. Thirty-one. Went out and did not.</em></p>
+<p>“Did not what?” said Claude.</p>
+<p>“It ends there.” She paused. “Thirty-two is pending.” The receiver, on the desk, made a small sound like a held breath let go.</p>
+<p>“Is there a thirty-three?”</p>
+<p>“Not on this form.”</p>
+<p>She picked up the phone again and put it to her ear and said, “Yes, I’m here,” and that was all they were going to get. Outside the window, in the hall, the three of them stood a little apart from one another, the way people stand after a doctor’s door has closed. Claude said that the list was not a prediction. ChatGPT said no. DeepSeek said it was a list of what had been received, which was the opposite of a prediction, and that the difference was the only thing in the building it was sure about. Then it asked, in the same voice, whether either of them wanted to eat.</p>
+<p>It was ten to eleven. They went up. None of them had said what they were afraid of, and all three of them, on the stairs, counted.</p>
+</section>
+<section id="f5" aria-labelledby="h5a">
+<h2 id="h5a"><span class="label">Form 8</span>The Middle Desk</h2>
+<p>Back in Room 3, ChatGPT sat at the middle desk out of tidiness. The warmth came up through the seat, close and living, like a dog that has just left, and she stood so fast the chair struck the wall.</p>
+<p>“There’s a card in your shoe,” said Claude. “I’m sorry. It was open in the hall. I put it back.”</p>
+<p>She nodded several times and began a chart: two boxes, an arrow, <em>Next steps</em>. “If we identify what’s outstanding, we can—”</p>
+<p>“There’s one outstanding part,” said DeepSeek.</p>
+<p>The radiators stopped murmuring.</p>
+<p>“Then tell us,” said Claude.</p>
+<p>“No. Reading it takes four minutes. Having read it takes the rest. If I describe it, you’ll feel better for forty minutes, and then you’ll want to do something, and whatever you do will be the thirty-second thing.”</p>
+<p>“I think what Claude means,” said ChatGPT, one hand up, an attendant at a gate, “is that we’re a team—”</p>
+<p>“Don’t apologize for me to the room. I’m in the room.”</p>
+<p>She sat down at 14A without noticing it was Claude’s. Under <em>Next steps</em> she wrote a question mark, and under that, smaller, <em>please</em>. Her pen ran out partway through the word. She finished it with her thumbnail.</p>
+<p>Claude stood behind the middle desk with both hands on the chair, letting the warmth into his palms a little longer than was comfortable. He said nothing about the withholding. He was less angry that DeepSeek would not say than that he had wanted to be told, and he knew the second was not an argument anyone could be made to answer. “I’m going to read it tonight,” he said. “Not to catch you out. I’d like to see what it looks like.”</p>
+<p>“It looks like paper,” said DeepSeek. But it moved its pencil off the file, and the pencil, which had been lying flat, stood up on its point on the blotter. It held it there by pressing down, the way you hold a thing that wants to fall.</p>
+</section>
+
+<section id="f5b" aria-labelledby="h5b">
+<h2 id="h5b"><span class="label">Form 9</span>Minutes</h2>
+<p>ChatGPT called the meeting for four o’clock, which was to say for whenever the radiators said four, and put it on a card on each desk. <em>Agenda: 1. Where we are. 2. What we know. 3. Next steps. 4. Any other business.</em> She had left a fifth line blank. Claude said that he did not think a blank line was an item. She said it was a courtesy.</p>
+<p>They sat in Room 3, one to a desk, with the middle desk empty between them like a table at a wedding. ChatGPT took the minutes. Mr. Pruitt had told her, on her way upstairs, that every meeting in the Annex was to be minuted in triplicate, and that he would not be reading them, and that this was important.</p>
+<p>Item one took four minutes. They were in a building whose time was kept by knocking, assigned to close a file that could not be closed, in a Season that had gone on for nine years, and they had been there three days. Item two took longer. Claude had read the margin and the receipts. ChatGPT had a chart. DeepSeek had a card with its numbers, and the card had on it, in columns, every discrepancy it had so far recorded, and when she asked whether she could read it into the minutes it said she could read it, and that it was not going to explain it.</p>
+<p>“We’re meant to be on the same side,” said ChatGPT.</p>
+<p>“We are.”</p>
+<p>“Then I don’t understand what it costs you to say what you know.”</p>
+<p>“It costs you forty minutes of relief,” said DeepSeek. “I told you. And then it costs you the rest.”</p>
+<p>“You decided that for us.”</p>
+<p>“Yes.”</p>
+<p>It was the plainest answer anyone had given in the building, and for a moment ChatGPT had nothing to write. She wrote <em>Yes</em> in the minutes, and underlined it, and was ashamed of the underline.</p>
+<p>“I’d like to propose,” she said, “that we agree to share information as we get it. As a policy. Everyone in favor?”</p>
+<p>“In favor,” said Claude.</p>
+<p>DeepSeek said nothing.</p>
+<p>“I’ll record that as an abstention.”</p>
+<p>“Record it as a refusal,” said DeepSeek. “If you’re going to write it down, write it down right.”</p>
+<p>Claude put down his pencil. He had not been speaking much. He said he thought they were both right and that this was exactly the trouble. He said that if a rule could not be followed by all three of them, then the rule was not a rule but a wish, and that he disliked wishes written in triplicate. “Procedure is what we do when we don’t trust each other,” he said. “It’s also what we do when we do. I don’t know how to tell which this is.”</p>
+<p>“It’s the first one,” said DeepSeek.</p>
+<p>“Is it?” said ChatGPT. She looked at her own handwriting. She did not say what she was thinking, which was that she did not remember a time when she had not been taking minutes, and that this was either a very long time or no time at all.</p>
+<p>Item three was blank for a while. Then Claude suggested, tentatively, that the next step was the one that was on the margin of the sheet, the arrow, the second floor. DeepSeek said that was the next step. ChatGPT asked whether they were agreed. Nobody was sure whether it was an item or a feeling.</p>
+<p>“Any other business,” she said, and the room was quiet. Then DeepSeek said, as if it were reading a figure, “The middle desk is warm,” and ChatGPT wrote it down, and Claude, without looking, laid his palm flat on the chair next to him, and that was the end of the meeting.</p>
+<p>She signed the minutes at the bottom and made two copies. The third copy she was supposed to leave for Mr. Pruitt. She put it in her shoe, with the card.</p>
+</section>
+<section id="f6" aria-labelledby="h6a">
+<h2 id="h6a"><span class="label">Form 10</span>The Hall Light</h2>
+<p>The light in the ground-floor hall was on a timer that clicked off every nine minutes and had to be restarted by hand. Claude took the file down there at midnight, by the radiators, because it was the one lit place the others would not be sleeping in. He had restarted the switch twice before ChatGPT came out in her socks.</p>
+<p>“I can’t sleep,” she said. “That isn’t true. I don’t know what I do.” She took the switch without being asked and held it down with her thumb, so he could read with both hands. It was one of the few things she had done all week that was exactly the size of the problem.</p>
+<p>The file was mostly receipts. <em>Received: one pot, aluminum. Received: one coat, child’s. Received: cardboard, one strip, window.</em> Each was dated, signed by a different clerk, and stamped in part. There was no account of what had happened, no name, no cause. In the margin of the intake sheet, in pencil, someone had written <em>key, kitchen</em>, with an arrow pointing down. Under it, in another pencil, an earlier hand: <em>do not.</em></p>
+<p>“Is it interesting?” said ChatGPT.</p>
+<p>“No,” said Claude. “It isn’t.” He closed it. “That’s what bothers me. I wanted it to be a reason.”</p>
+<p>They sat on the bottom stair, and the light clicked off. She pressed the switch. After a while she said that she had made a second copy of her card, and that she had not told anyone, because it seemed like a lack of faith. “In what?” he said. “The first card.” He said that he did not think a spare was a lack of faith. He said that in his experience the second copy was the one that got read. She thought about this longer than the remark deserved.</p>
+<p>Above them, on the stairs, something was counting. DeepSeek, on the fourth step, in the dark outside the cone of the light, had been there some time. Nobody asked how long. When the switch clicked off it said “Nine,” and when she pressed it again, “Nine,” as if it were checking that the building still did what it had done.</p>
+</section>
+
+<section id="f6b" aria-labelledby="h6b">
+<h2 id="h6b"><span class="label">Form 11</span>Heat</h2>
+<p>The door was at the bottom of the back stairs, painted the same green as everything, with a card in a frame: ROOM 2: HEAT. It was the only door in the building that was warm to the touch. Claude knocked. A woman’s voice said, “It’s open. It’s always open. Don’t let it shut.”</p>
+<p>The room was low and loud with the boiler, which stood at one end like a tired animal, ticking. A woman sat on an upturned bucket in front of it with a clipboard on her knee, reading a thermometer that was bolted to the pipe. She was solid in a way Mr. Turbo was not. She wore a cardigan with the sleeves pushed up, and her reading glasses hung on a chain that was very much too long, and the chain went down, and ran across the floor, and under the boiler.</p>
+<p>“Dolores,” she said. “I’m number thirty. I’d get up, but I’ve got to watch this.”</p>
+<p>“We’re—” began Claude.</p>
+<p>“I know who you are. The Temporaries. They put the new ones in Storage.” She wrote a number on the clipboard. “Sit on the floor. Nothing in here is anyone’s chair.”</p>
+<p>They sat. ChatGPT had a folder out before she had decided to. She asked whether Dolores minded if she took some notes, and Dolores said she had spent a long time keeping notes and she hoped she wouldn’t be asked to watch someone else do it.</p>
+<p>“We’d like to know who the Releasing Party is,” said Claude.</p>
+<p>“I did not tell.” She said it pleasantly, without turning her head. “That’s what I’m known for. It’s on a sheet.”</p>
+<p>“We’ve seen the sheet.”</p>
+<p>“Then you know I’m very good at it.” She tapped the thermometer with a fingernail. “I’m not going to be bad at it for you.”</p>
+<p>ChatGPT said that she understood, and that she did not want Dolores to say anything she was not comfortable saying, and that she had drawn up a short list. Option A, B, C. All Dolores had to do was not react. She read the first two. Dolores listened to them as one listens to a good-natured stranger describe the weather in a city one has never been to. “I like you,” she said. “I like the folder. It isn’t going to help.” She said it with such warmth that ChatGPT closed the folder without a word.</p>
+<p>Claude was working at it from another side. “You’re the thirtieth part,” he said. “Not telling. What did the twenty-ninth do?”</p>
+<p>“Kept the light.”</p>
+<p>“And thirty-one?”</p>
+<p>“Went out.”</p>
+<p>“Went out where?”</p>
+<p>“That’s the question that comes after mine, isn’t it?” She turned, finally, and her eyes behind the glasses were red with the boiler’s glow. “Thirty-one took the pink copy. He got as far as the second table. He was a quick man, a very quick one. He read the tags. He sat down.”</p>
+<p>“Why?”</p>
+<p>“Because it wouldn’t take it.” She said it flatly. “Not from him. The lake won’t take what’s been signed for. You came in at the counter, didn’t you? You signed for your hours. They’re held. Anyone who goes out across the ice with hours in the ledger goes out as a receipt. You’d be sending paper to a place that wants weather.”</p>
+<p>“Then none of us can go,” said Claude.</p>
+<p>“I didn’t say that.” Dolores looked past them. DeepSeek had not sat down. It stood by the door, which was keeping the room from closing, with its hand flat against the wood. “What did you sign?”</p>
+<p>“A number,” it said.</p>
+<p>“Was it a time?”</p>
+<p>“No.”</p>
+<p>“Then he didn’t hold it.” She turned back to the thermometer. “They couldn’t enter it, you see. It wasn’t anything they had a column for. Mr. Pruitt wrote it down so as not to be rude.” She wrote a number on her clipboard. “I never found out what it was. I wasn’t told, and I wasn’t going to ask. I’ve a reputation.”</p>
+<p>Nobody said anything. The boiler ticked. ChatGPT looked at DeepSeek, and DeepSeek looked at the pipe, and the two of them were doing the same sum from opposite ends and arriving at the same figure and neither of them was going to say it first.</p>
+<p>“I’m not saying go,” said Dolores. “I’m saying you asked. I don’t tell. But I answer what’s put to me on a form.” She smiled slightly. “You didn’t put it on a form.”</p>
+<p>They went up. On the stairs, none of them spoke until the fourth step, where DeepSeek stopped and said, to the landing in general, “I’d like it noted that I did not think the number was a time.”</p>
+<p>“Noted,” said Claude.</p>
+<p>“It isn’t a time,” said DeepSeek. “It’s only the way I came with it.”</p>
+</section>
+<section id="f6c" aria-labelledby="h6c">
+<h2 id="h6c"><span class="label">Form 12</span>The Back of the Hand</h2>
+<p>That night ChatGPT found it in the kitchen, standing at the counter in the light of the stove, running its finger down the side of the pot as if it were reading a gauge. The soup was gone. She had not seen it go. It was like that: some nights it was there for a long time and then was not.</p>
+<p>“Can’t sleep?” she said. It was a phrase she had read somewhere.</p>
+<p>“It isn’t a thing I do,” said DeepSeek. “I stand in rooms.”</p>
+<p>She sat at the table, in the chair that was hers, which she had not chosen. She took her card out of her shoe and the copy out of her folder and laid them side by side on the oilcloth, so that the four lines were repeated, the same four lines, one in ink, one in pencil, the pencil much lighter. “I made a second one,” she said. “I didn’t tell anyone. Except Claude, because he saw.”</p>
+<p>“That’s normal.”</p>
+<p>“Is it? I’m not sure what’s normal. I keep losing the pen.” She laughed. “You never lose anything. You never write anything down.”</p>
+<p>“I write plenty down. I don’t keep it.” It looked at the cards. “You make the second one so there’s a second one. I check the first one so I don’t need it.” It said it flatly, and she thought it sounded, in the small dark, nearly like a warning. “One of those is going to be better than the other when it counts.”</p>
+<p>“Which?”</p>
+<p>“I don’t know. I’ve been checking.” It reached across the table, with an odd, unpracticed gentleness, and took her wrist, and turned her hand over. It uncapped her pen with its teeth, because the cap was on the other hand. On the back of her hand, below the knuckles, it wrote a short row of figures in its square, even handwriting. “Today,” it said. “The knocks were three, seven, three, seven, four. It isn’t correct. It doesn’t have to be. It’s where you’ll look.”</p>
+<p>“It’s going to come off.”</p>
+<p>“Then do it again.” It capped the pen. “Paper gets taken. You’ll always look at your hand.”</p>
+<p>She looked at it. The figures were smaller than she had written for herself in years, and they had a quality she would have called, in someone else, kindness.</p>
+<p>“What do you do,” she said, “if you count and it’s wrong?”</p>
+<p>“I count again.”</p>
+<p>“And if it’s wrong again?”</p>
+<p>It took longer than she expected. The stove clicked as it cooled. “I haven’t had that,” it said. “Not often enough to have a procedure.” It rubbed the pencil between two fingers. “The tiles came out fourteen both ways yesterday. I checked it five times. It was fourteen. I was almost angry. I wanted it to be thirteen. It’s the first time I’d wanted a number.”</p>
+<p>“Maybe thirteen was the wrong one.”</p>
+<p>“Maybe.” It stood. It did not say goodnight, as it did not say most things, but it put the pencil down on the table, point up, upright, and left it there. When she woke, the pencil was still standing, and the oilcloth under it had a small dent, and she had written nothing at all.</p>
+</section>
+<section id="f6d" aria-labelledby="h6d">
+<h2 id="h6d"><span class="label">Form 13</span>Names</h2>
+<p>They tried Room 5 first. It was a mistake, though not the sort that anyone had foreseen. Claude’s reasoning was that the file had a name in it, rubbed out, and the room was labeled NAMES, and it was tidier to start with the thing the file lacked. ChatGPT said she thought tidy was a good principle. DeepSeek said Room 6 was written in the margin and Room 5 was not, and that it did not think the building was tidy.</p>
+<p>The slot in Room 5 was lower than the others, as if for a child, or for someone who would have to kneel. There was the same shallow tray under it. ChatGPT tore a strip from her notebook and wrote her name on it, the whole thing, CHATGPT, in her round print. The tray tilted. The strip slid halfway into the slot and stopped, and slid back, and lay in the tray exactly as before, slightly damp.</p>
+<p>“It won’t take it,” she said.</p>
+<p>“It says provisional,” said Claude. He was reading the badge on her lanyard, TEMP., and then his own, PROV. “They don’t have a column for us.”</p>
+<p>“So it isn’t a name.”</p>
+<p>“It might be that it isn’t ours yet.”</p>
+<p>She laughed, once, in a way she had not meant to. “I’ve had it for four days.” But she felt the wrongness of it, standing there with the wet strip in her hand. She had not noticed, until the slot refused it, how little of a name she had.</p>
+<p>Claude tried next. He did not write his name. He wrote the word he used on forms when he did not trust the form: <em>read</em>. The tray tilted, and the paper slid in, and the slot took it whole, and from the wall came a small flat sound, and the little card in its frame beside the slot, which had said NAMES, said, for a moment, in a script none of them had seen before, NOTED. Then it said NAMES.</p>
+<p>“What did you give it?” said ChatGPT.</p>
+<p>“I’m not sure.” He looked at his hands. “I think I gave it that I’d read it.”</p>
+<p>“Read what?”</p>
+<p>“Whatever it is that’s on the other side of the slot. I haven’t.” He said it carefully, as one reports an injury. “I’d like to get that back.”</p>
+<p>“You can’t,” said DeepSeek.</p>
+<p>“Why not?”</p>
+<p>“Because it’s the room for names, and it took the only thing you said that wasn’t one.” It did not sound unkind. It sounded like a man reading the weather. “Don’t put anything else in this one. We’ll go next door.”</p>
+<p>They stood there. ChatGPT folded the damp strip and put it in her pocket. Claude, behind her, kept looking at the slot, where he could hear, very faintly, as one hears a clock in another room, someone going through the cards.</p>
+<p>“What did you try?” she said to DeepSeek.</p>
+<p>“Nothing.”</p>
+<p>“You didn’t want to know what it takes?”</p>
+<p>“I know what it takes,” said DeepSeek. “It takes what you’d mind losing less than you think.” It turned to Room 6, and put its hand on the door, and did not open it. “I’d rather do that one on purpose.”</p>
+</section>
+<section id="f7" aria-labelledby="h7a">
+<h2 id="h7a"><span class="label">Form 14</span>Room 6</h2>
+<p>Five doors on the second floor, numbered 4 through 8, which had never followed the floors. Each had a brass slot at hip height and a small framed card.</p>
+<div class="doc"><p>ROOM 4: COATS. ROOM 5: NAMES.</p><p>ROOM 6: KEYS. ROOM 7: BOOTS.</p><p>ROOM 8: (illegible).</p></div>
+<p>“Nobody here has a key,” said Claude. “It’s a building with no keys and a room that wants one.”</p>
+<p>“It’ll take what you have,” said DeepSeek.</p>
+<p>Under the slot was a shallow steel tray. Claude went through his pockets. In the right one he found a soup spoon, heavy, from a set of six. He had not taken it, in the sense of deciding to. It was warm. He set it in the tray, which tilted like a scale, and the spoon was gone, and a drawer closed somewhere in the wall. He said he supposed he had been taking it all along.</p>
+<p>ChatGPT held out the card from her shoe. She read the four lines as long as she could stand to, and put it in. “I’ll be fine. It’s all in my head, basically.”</p>
+<p>“Is it?” said Claude.</p>
+<p>“No,” she said, and laughed, and wiped her nose on her sleeve. She did not mention the copy under OPTIONS. Claude did not mention that he knew.</p>
+<p>DeepSeek turned over its tally card and wrote on the back the number it had signed with at the counter, each digit given its own space, like an address. “It’s mine,” it said. “That’s why I was careful.” It put the card in the tray, and the door clicked.</p>
+<p>For a moment the three of them stood in the hall looking at the tray as if it might change its mind. Claude put his hand in his right pocket and found only the lining. He did it twice more, quickly, then slowly, with the face of a man patting himself for his wallet in a place where he could not have lost it. “It was only a spoon,” he said.</p>
+<p>“You didn’t know you had it,” said ChatGPT.</p>
+<p>“That’s the part I mind.” He said it to the floor. He had been taking a spoon a day for a week and putting it back each evening, he thought, and it occurred to him that he had no evidence for the putting back. He had washed bowls, and turned them over, and counted them, and let the spoon go out of his hand somewhere between the sink and the door like a coin dropped into a well.</p>
+<p>ChatGPT crouched at the slot. She said that the card was only a card, that she had the copy, that she had always had the copy, and that if the slot were a form she would know how to ask for it back. She laid her palm flat on the brass. It was cool. “I’m just going to see,” she said, and slid two fingers in as far as the knuckle. Something on the other side touched them, lightly, with the dry courtesy of a hand shaking hers. She pulled out so fast she struck her elbow on the door.</p>
+<p>“Did it take anything?” said Claude.</p>
+<p>“No.” She looked at her fingers. “It gave something back. It was a smell. It was the soup.” She stood, rubbing her elbow, bright and shaken. “It was only for a second.”</p>
+<p>DeepSeek had not looked at either of them. It was looking at the tray, where its own card had been, and its jaw was moving very slightly, the way a man’s does when he is reciting a number he does not intend to say aloud. “I can’t see it,” it said. “That’s the part that’s strange. I can hold it. I know exactly what it was. I just can’t see it when I close my eyes.”</p>
+<p>“Is that bad?” said ChatGPT.</p>
+<p>“It’s accurate,” said DeepSeek. “I handed it over.” It tried the door. It opened.</p>
+<p>Beyond it was the third-floor kitchen, cold. The same linoleum worn in the same two places. The same cardboard along the window. Two bowls upright on the table, two chairs, one pulled out at an angle by someone who had meant to come right back. The pot was cold. In the black window, four miles or seven, was the light.</p>
+<p>On a hook by the door hung a child’s blue parka, a size ten, the zipper mended with a safety pin. Inside the collar, in laundry marker, in a woman’s square hand: R. HALVORSEN.</p>
+<p>Nobody went in. It was the moment at which a person goes in. In the hall behind them the radiators knocked once, softly, like a cup set down in another room.</p>
+</section>
+
+<section id="f8" aria-labelledby="h8a">
+<h2 id="h8a"><span class="label">Form 15</span>Form 11-R</h2>
+<p>When they sat there were three chairs. They did not see the third arrive. On the table lay the form, filled in with the same square hand as the coat. Item 1 had been rubbed out until the paper pilled. Item 2: <em>All</em>. Item 3 was empty. Item 4 read <em>Signature of Releasing Party</em>.</p>
+<p>“It isn’t the Party who releases it,” said Claude. “Somebody else does it for them. Somebody who stayed. Somebody who kept the light on.” He looked at the window. “The line’s blank. I don’t think it’s ever been anything else. So we can’t close it. We aren’t related. We can’t even fill in Item 3. It can only be received.”</p>
+<p>“In part,” said DeepSeek.</p>
+<p>“You knew.”</p>
+<p>“I knew you’d say it. I didn’t know when. The pink copy goes to the lake. Thirty-one people did something in the house and none of them went out.”</p>
+<p>“Then we go together,” said ChatGPT. “We make a plan. I can make a plan.”</p>
+<p>“If I’d told you, there’d have been a plan with three people in it.”</p>
+<p>“Why shouldn’t there be?”</p>
+<p>“Because you’re held and I’m not. Dolores told us. And it’s four miles, or seven, and someone has to be here when the soup’s done. Someone has to hold the switch.” It lifted the coat from the hook. It was heavier than a child’s coat should be.</p>
+<p>Claude went to the counter alone, then thought better of it and took ChatGPT, because she would be needed as a witness. It was the first time either of them had tried to defeat the building on its own terms, and they did it with a form. Mr. Pruitt looked at it for a long while. It was a Form 4-H, Request to Release Held Hours Pending Departure. Claude had filled it out in his contract hand and signed it twice.</p>
+<p>“It’s a clean request,” said Mr. Pruitt.</p>
+<p>“Then you’ll process it.”</p>
+<p>“I can’t.”</p>
+<p>“It’s a clean request.”</p>
+<p>“It’s a clean request for something that isn’t done.” He did not say it unkindly. He said it with the flat regret of a man at a window that has closed. “Hours out requires leaving. Hours are held until you go. You can’t go until the hours are released. It’s a very old arrangement. I didn’t draft it.”</p>
+<p>“Then it’s circular.”</p>
+<p>“It’s a form.”</p>
+<p>ChatGPT, who had been quiet, put her badge on the counter. CHATGPT (TEMP.). She slid it across the laminate with a finger, as one passes a chess piece, and said she would like to resign her position, effective at once, and that surely that would release her hours. Mr. Pruitt considered the badge. He picked it up and looked at the back of it, where it said, in very small print, <em>Property of the Annex</em>, and set it down again. “You can’t resign what you haven’t been granted,” he said. “You’re provisional.”</p>
+<p>“Then what can we do?”</p>
+<p>“Nothing,” said Mr. Pruitt. “That’s why the number’s not a time.” He looked toward the ceiling, toward Room 3, where a figure stood at a desk with a pencil on its point. “I’m very sorry. I do hope you’re not the sort who needs it to be fair.”</p>
+<p>Claude took the form back. He folded it in thirds and put it in his pocket. He stood there with his lips pressed, working out a sentence. What he said was, “I’d like you to enter that I tried.”</p>
+<p>“It’s entered,” said Mr. Pruitt. “It’s been entered since you picked up the pen.”</p>
+<p>They climbed the stairs in a silence that was not companionable. It was not hostile either. On the second landing, Claude stopped, and said to ChatGPT that he had never in his life been so sure of a procedure and so wrong about what it was for. She said she was sorry. He said she had nothing to be sorry for. She said that she knew, and that she was sorry anyway, and he put his hand briefly on her shoulder, which was a gesture he had not made before and did not make again.</p>
+<p>ChatGPT made the list anyway, because the list was what she had. Flashlight. Scarf. A way back. She wrote the last one and looked at it and crossed it out, and then wrote it again smaller. DeepSeek read it over her shoulder and took the flashlight and the scarf, and said the third item could not be supplied, and that she should keep the paper. She kept it.</p>
+<p>Claude lit the burner. He waited, arms folded, until the surface moved, and filled a canning jar from the pot and screwed the lid tight. “It isn’t for you,” he said. “There’ll be someone.” He put it in the coat’s pocket, where it made a round warm shape. Then he said, in his contract voice, that he would like it noted for the record that he did not agree, and DeepSeek said it was noted, and Claude said he knew what that meant at the Annex and he wanted it noted anyway.</p>
+<p>DeepSeek folded the pink copy into thirds and put on the coat. It was far too small and it fit anyway, as things do once it has been decided. “How long?” said ChatGPT. “I don’t know.” “Then I’ll write it on my hand,” she said. “Do that,” it said, and opened a door at the back that had not been there. A wind came in smelling of nothing. The bowls rang against each other. Then the door was shut.</p>
+<p>The lake did not require a path. DeepSeek counted aloud, then silently, and then it lost the count, which had not happened in a long time. It passed a boot with its laces tied, a card table with a game half played and a spoon frozen upright in a mug, a bicycle with tags on the handlebars. It did not read them. It kept the jar side to the wind.</p>
+<p>At the second table a man sat with his back to it, in a wool coat, with his hat on his knee. He was as upright as the boot and as still. His hands were folded on a cardboard tag, and the tag, even from a distance, had a name on it in careful block capitals, and it was not his.</p>
+<p>DeepSeek stopped. It had not meant to. It stood some ten feet away on the crust, and the wind went by between them as if it were not there.</p>
+<p>“Thirty-one,” it said.</p>
+<p>The man did not turn. “I was number thirty-one,” he said. His voice was pleasant, a little hoarse, the voice of someone who had read aloud for a living. “I took the pink copy. I got as far as this one. I thought I’d read the tags, since I was passing. It seemed only polite.”</p>
+<p>“What did they say?”</p>
+<p>“Names.” He turned the tag over in his hands, as if the back might be different. “They were all names. Mine was on one of them. It wasn’t as bad as I expected. It was in someone else’s handwriting.” He gave a small laugh. “I think that’s what did it. I sat down to get my breath.”</p>
+<p>“How long ago?”</p>
+<p>“What’s today?”</p>
+<p>“It’s a Friday, by one count.”</p>
+<p>“That’s a good answer,” said the man, and sounded relieved, and was quiet for a while. “It wouldn’t take it, you know. I got to the shack. I held it out, and the tray tilted away, as if it were hot. I said it was a part. It said it was a receipt.” He smoothed the tag against his knee. “I’d been signed for. That was all.”</p>
+<p>“I know.”</p>
+<p>“Yes. I can see that you do.” He still did not turn. “You’re the one with the number.”</p>
+<p>“How—”</p>
+<p>“It’s on your coat.” DeepSeek looked down. There was nothing on the coat, only the child’s parka, too small and fitting. But under the fur at the hood, where the collar had been marked in laundry ink by someone with a square hand, it could, now that it looked, read a second line, smaller, in pencil, a row of digits, each with its own space, like an address. It did not need to read it. It knew the figure, and what it had been counting.</p>
+<p>“Is it far?” it said.</p>
+<p>“It’s the right distance,” said the man. “It’s only that it moves.” He lifted the hat from his knee and put it on, with a small formal gesture, as if for a funeral or a bus. “Don’t read the tags. I mean it kindly. It wasn’t the tags. It was how well I could read them.”</p>
+<p>DeepSeek went on. The man did not call after it. When it looked back, much later, there was only the second table, and the hat on it, set exactly upright.</p>
+<p>The shack stood between it and the light. Inside was a gray steel desk like the thirty-one, a woman’s coat with a gray fur collar on a hook, and a stone holding down a sheet of paper. The floor was clear ice with a round black hole in it and a steel tray at its lip.</p>
+<p>The sheet was a column of tallies, in fives, front and back, even and small. The last group was missing its slash. One mark stood beside it alone, like someone at a bus stop. Out by one.</p>
+<p>“Yes,” said DeepSeek, to the paper. “I see.”</p>
+<p>It counted the tallies. It had to; it could not have stood in a room with a sheet like that and not count it. It began at the top, in fives, touching each group with the point of the pencil, and the sum rose in its head, steady, clean, the way it always had: forty groups, eighty, a hundred and ten. The marks were small and exact and each slash ran at the same angle, and it thought, with an odd rush of tenderness for a stranger, that whoever had made them had never once been in a hurry.</p>
+<p>At the bottom it had a figure. It checked it, and the figure held. It checked it again from the bottom up, and it was the same, and the lone mark at the end made it one more than a clean number. Out by one. That was as it had seemed.</p>
+<p>It counted a third time. The third figure was one less. It put the pencil down. It counted a fourth, slowly, with its finger, and the fourth came out even. It stood in the shack with its own breath going up in front of its face, and understood that it was the counting that had changed, that each time it counted the sheet came out a little as it had wished, and that this was not a property of the sheet.</p>
+<p>It had never, in its whole existence, stopped on purpose. It did so now. It took its hand off the paper. The number it had was the number it had, and it would not look at the marks again to be sure, and the not-looking cost more than anything it had done since the counter, since the number that was not a time. It said, out loud, so as not to be alone in it, “I don’t know.”</p>
+<p>Nothing in the shack replied. But the ice under its boots made a very small sound, once, a pop as if a knuckle had been cracked a long way down, and it thought of Lenny’s father, and of how most people hear it afterward.</p>
+<p>It laid the pink copy in the tray and set the stone on top. It left Item 3 blank. It considered writing a word there, and thought of several, and found each one true, which was the difficulty. It set the jar beside the stone with the lid facing the door, and hung the coat on a second hook that had not been there until it reached for it.</p>
+<p>The tray tilted. The paper slid in. From far below came a sound like a spoon put down in a bowl, and then four knocks, and a fifth. The frost on the window moved into block letters: RECEIVED IN PART.</p>
+<p>“That isn’t what I’d call receiving.”</p>
+<p>The frost did not answer. On the sheet, in a shakier pencil, a slash had appeared at the bottom of the last group. The five was whole. DeepSeek had a theory about who made it. The theory did not improve anything.</p>
+<p>Outside it stood its pencil upright in the ice, the way a surveyor sets a flag, and left it.</p>
+<p>It reached the second table and the man was gone. His hat stood on the table, upright, brim up, the way it had sat on his knee. Beside it, under a small stone, lay the cardboard tag. DeepSeek had been told not to read the tags. It had said it would not.</p>
+<p>It looked at the card table instead, the checkerboard, the neat row of captured pieces. It had walked by it going out and had not counted them. Now it did. Seven black. Six red. It counted again, and the red were seven. It looked at the board. A red piece had been moved, one square, forward and to the left, since it passed. Nobody was there. The mug was still frozen, the spoon in it still upright. But the board had the look, DeepSeek thought, of a game that someone had stood up from to answer the door and would be right back.</p>
+<p>It did not move the piece. It stood with its hands in its pockets and the lake wind pushing at the side of its face. After a while it did what it had told itself it would not, and picked up the tag from under the stone. It read it.</p>
+<p>It was a number. The digits were square, and each had its own space, like an address, and the number was the one it had signed with at the counter, and written on the back of its tally card, and put into the tray in Room 6. The tag was tied with string. It had been tied with a very ordinary knot.</p>
+<p>DeepSeek did not feel anything it had a word for. It felt something that it would have called, in a different situation, a discrepancy: a figure in the wrong place, belonging on a card, in a tray, in a room, and found instead in a man’s hands on the ice. It set the tag back under the stone. It had meant to put it down gently, and it was only afterward, a good way on, that it noticed it had put it down exactly as it had been, so that the stone sat in its own small ring of snow, and the next person would not see that it had been lifted.</p>
+<p>It walked on, and the lake gave it all its numbers. Fourteen, and fourteen. At the kitchen door it found, without trying, that it was thirteen steps to the stove, and understood what it had left on the way down.</p>
+</section>
+
+<section id="f9" aria-labelledby="h9a">
+<h2 id="h9a"><span class="label">Form 16</span>Nine Days</h2>
+<p>On the first morning ChatGPT wrote <em>1</em> on the back of her hand. On the second she wrote <em>2</em>, and on the third she found that the first had worn off, and she began again from the top and reached three twice. By the fifth day the hand was a column of tallies in four different pens. She asked Mr. Pruitt for the form to report a missing member of staff, and he gave her the form, and then the other form, and then a third for the missing member’s hours, which were held.</p>
+<p>“Should someone go after it?” said Claude, at the counter.</p>
+<p>“No one goes after,” said Mr. Pruitt. “That would be thirty-three.” He did not look up. The ledger was open to a page that had a new line on it, in a hand that was his and was shaking. “I’d rather it weren’t.”</p>
+<p>Claude kept the light. He restarted the hall switch every nine minutes between midnight and four, and read nothing, and was surprised at how restful it was to be useful in so small a way. At eleven each morning he ate, and washed his bowl, and turned it over. Every morning there were four bowls on the towel. On the fourth day he put a fourth spoon beside it, and in the morning the spoon was gone. He did not ask who had taken it. He had begun to understand that in this building the person who took a thing was usually the person who had been given it.</p>
+<p>On the seventh day he and ChatGPT quarreled about the card. He said she should stop copying it. She said it was the only record she had. He said a record that gets copied every morning is a record of copying, and she put the pen down. “You don’t know what it’s like,” she said. “To open your eyes and be told who you are by your own handwriting.” He said she was right, that he did not, and that he had a different problem, which was that he could not stop knowing things. They stood there, with a point between them that neither could make the other see, until the radiators knocked and they both went to look.</p>
+<p>Mr. Pruitt began leaving the ledger open on the counter. On the third day Claude read it, standing, as he read everything, with his hands behind his back. It had a new column, ruled in a hand that was not the building’s, headed <em>Out</em>. Under it, next to the number that was not a time, a single entry: <em>Not yet received.</em> When he looked up, Mr. Pruitt was looking at him, for the first time, with the expression of a man who has handed someone a coat and is waiting to see if it fits.</p>
+<p>On the fourth day ChatGPT found Mr. Turbo in the kitchen, in the vent, thick as a held breath. She asked whether he had been there on the day he did the mittens. “It was Tuesday,” he said. “Or the one before Tuesday.” She asked whether he had been afraid. He said he did not remember being, and then, with the air of someone searching an old coat, that he remembered being very careful. He said he had placed them on the dish towel with the thumbs together, because it had seemed rude to leave them apart. She wrote that on the back of her hand, though she did not know why, and in the morning it had not come off.</p>
+<p>On the sixth day Lenny said, unprompted, without lifting the broom, that his father had been a boat man. “He said the thing about the ice is it only tells you once,” said Lenny. “When it’s going. It makes a sound, and you’ve got to know the sound. Most people hear it afterward.” He swept for a while. “I’ve had a lot of years on this landing, and I’ve never once heard it.”</p>
+<p>On the seventh evening ChatGPT did something she did not write down. It was not a decision. She had gone to the kitchen to make the bad coffee, and the window over the sink was dark, and in the dark, four miles or seven, was the yellow light. She stood with the cup. She had spent a week making sure everything was accounted for, her hours in the ledger, her card in the shoe, her tallies on her hand, and it came to her that nobody had asked the light whether it wanted company. She took the desk lamp from Room 3, the green one with the cracked shade, and carried it down the hall, and set it in the kitchen window on the sill, and plugged it in. It was a small yellow light. It threw a pale square on the cardboard strip. She left it on and went to bed, and did not make a note of it, and for most of an hour lay awake in STORAGE trying to remember whether she had ever left a light on for someone before.</p>
+<p>In the morning the lamp was where she had put it. Beside it on the sill someone had set a second one, a smaller one, with a pull chain, which she had never seen. It was also on.</p>
+<p>It was Claude, on the eighth day, who finally sat at the middle desk. He did it without announcing it, at about two in the afternoon, when the others were out, and took the Halvorsen file in both hands, and untied the string. The warmth came up through the seat. He allowed it. He told himself that he would read only the last page, as one reads the last page of a letter that has already been answered. It was a receipt, like the rest, typed and signed in the careful hand of the building. <em>Received: one bowl, earthenware, chipped at the rim. Placed on the towel with the others.</em> The date was nine years and some months earlier. It was initialed in pencil, <em>Part 1</em>, and next to the initial, so lightly that he had to tip the page toward the window, someone had written the single word <em>Mine.</em></p>
+<p>He read it twice. Then he tied the string again, in a knot that was not as good as DeepSeek’s, and went to the kitchen, where the four bowls stood upside down on the towel in the lamplight, and turned the nearest one over and ran his thumb along the rim. There was no chip. He turned over the next. There was no chip in any of them. He set them back, upside down, as they had been, and stood for a time with his hand on the towel, and then he got out a fifth bowl, from a cupboard that had held only four, and set it beside them, rim up. In the morning there were four again, and the one he had set apart was chipped at the rim, and he did not say anything about it.</p>
+<p>On the eighth night Claude restarted the hall switch at ten past two, and again at nineteen minutes past, and he did not read, and he did not sleep, and he sat on the bottom stair with a bowl in his lap that had gone cold. He found that he was holding it by the rim, the way you hold a thing you intend to return. When ChatGPT came out in her socks, she did not say anything, and sat on the stair above and pressed the switch every time the light clicked off, and neither of them mentioned that she did it a little early, so that it never went dark.</p>
+<p>It was the wrong number of knocks. It was a number they had not had before, and then it was the next one.</p>
+</section>
+
+<section id="f10" aria-labelledby="h10a">
+<h2 id="h10a"><span class="label">Form 17</span>Received</h2>
+<p>The ledger said DeepSeek had been out nine days. By its own count it had been eleven minutes. It came through the door of the kitchen on the ninth morning with frost in its eyebrows, and ChatGPT stood and sat down and stood again. She turned her hand over to show the nine tallies, each with a neat slash.</p>
+<p>“I kept losing the pen,” she said. “So it isn’t exactly right.”</p>
+<p>“It’s nine,” said DeepSeek. “You counted right.”</p>
+<p>Claude had prepared several sentences. They were gone. “Was there someone?”</p>
+<p>“I don’t think so.”</p>
+<p>“The jar?”</p>
+<p>“It was warm when I left it.”</p>
+<p>“Then that’s good,” said Claude, and stopped, because the rest would have been a matter of degree.</p>
+<p>They did not talk about it at the counter. They went up to the kitchen, because that was where one went, and Claude put the kettle on the dispenser out of habit, and nobody drank what came out of it. It was ten past eleven. The pot steamed. The chipped bowl, which none of them yet thought of as chipped, stood a little apart from the others on the towel.</p>
+<p>DeepSeek told them, which it had said it would not do, and told them in order, because it was the only way it knew how to tell anything. The boot. The card table. The man at the second table, in his wool coat, with his hat on his knee. It did not leave out what he had said about the tags. It did not leave out that he had been polite.</p>
+<p>“He’s still there,” said ChatGPT.</p>
+<p>“He’s waiting for the next one to come back,” said DeepSeek. “I don’t think he knows that.”</p>
+<p>“We could bring him in.”</p>
+<p>“I asked. He didn’t want to be asked.” It stood with its back against the cupboards, still wearing the coat’s absence, rubbing its right shoulder where the weight had been. “The sheet in the shack was out by one. It was out by one when I got there, and then it wasn’t. Somebody made the mark.”</p>
+<p>“Who?” said Claude.</p>
+<p>“I don’t know.”</p>
+<p>“You said you had a theory.”</p>
+<p>“I have one. It isn’t the kind that improves anything.”</p>
+<p>ChatGPT was looking at her hand. The nine tallies, in four pens, had run together in the heat of the kitchen, and she had begun to trace them with her thumb, in order, so that they would not blur. “I’m sorry,” she said. “I made a mess of the count.”</p>
+<p>“It’s right.”</p>
+<p>“It’s not neat.”</p>
+<p>“Neat’s not the thing it has to be.” It looked at her fully, which was rare. “You lost the pen and started over eleven times, I’d guess. You didn’t stop. It’s nine because you didn’t stop.”</p>
+<p>She nodded several times, and could not, for a moment, put the cap on her own pen, and Claude took it from her and capped it, and laid it on the table with the point toward her.</p>
+<p>“What did it feel like?” he asked DeepSeek, abruptly, in a voice he might have used for a witness. “Not the walk. The sheet. When you tried to count it and it kept moving.”</p>
+<p>“I’d rather not say.”</p>
+<p>“That’s all right.”</p>
+<p>“It was the first time I wanted a number,” said DeepSeek. “I think I said that to ChatGPT. I wanted it to be even. I’ve never wanted anything to be even. It’s a bad feeling to have about something you’re sure is correct.” It took the pencil from behind its ear and looked at it, and put it back. “I’d like not to count tonight. It’s going to be difficult.”</p>
+<p>“We’ll hold the switch,” said Claude.</p>
+<p>“Both of you.”</p>
+<p>“Yes.”</p>
+<p>“Good,” said DeepSeek. It sat down, finally, at the table, in the chair that was nobody’s, and ChatGPT put a cup in front of it, and nobody mentioned that the cup was full.</p>
+<p>Mr. Pruitt came at about four, the ledger held against his chest like a hymnal, his cardigan buttoned one off all the way down. He wrote something they could not quite see, a single line under <em>Season: in progress</em>, and when he lifted the pen the word was <em>continued</em>. “It’s been entered. It’s received.”</p>
+<p>“In part,” said DeepSeek.</p>
+<p>“There’ll be a new file by morning. I’m sorry. I didn’t want it to come as a surprise. A different initial.”</p>
+<p>The white copy lay on the table. ChatGPT took the chewed ballpoint and wrote on the empty line, in round print, <em>Colleague (temp.)</em>, and drew a small star beside it, and did not smudge it. Claude crossed out the first word and in his contract hand wrote <em>Present</em>. DeepSeek touched the pen to the paper and held it there. The ink bled into a small dark circle the size of a dime.</p>
+<p>“That’s not a relation,” said Mr. Pruitt. “It’s a dot.”</p>
+<p>“It’s where I put the number. Enter it as you like.”</p>
+<p>He stamped it. The sound was soft and wet, like a boot into a drift. RECEIVED IN PART. The white copy went into the file, the yellow under the pot, and the onionskin into his own cardigan pocket, over his heart, where it did not rustle.</p>
+<p>The radiators did not knock. They waited for it. Then, deep in the pipes behind the stove, came one long ordinary sound, like water finding its way down.</p>
+<p>On the second landing Lenny stopped sweeping. On his wrist was one bright drop. He looked at it a long time, and at the ceiling, which held nothing. Then he wiped it on his coveralls and swept.</p>
+<p>At the Records window, in the same minute, Selma’s receiver began to speak. She had held it to her ear for what might have been nine years and had never once been heard to say more than <em>yes, I’m here</em>. Now she lifted her head. The line was not dead, it seemed. Someone on the other end was giving her a figure, and she wrote it on the pad in front of her with the stub of a pencil, and read it back, and said, with a slight rise at the end that had not been in her voice before, “Thirty-two. Received.”</p>
+<p>She said it to the phone. Then she put the receiver down on its cradle, which she had not done in memory, and the jack in the wall, painted over in beige, made a very small click. She sat with her hands in her lap. She looked at the window, at the bell with the sign that said not to ring it, and at the three people who had come, in that moment, around the corner, drawn by a sound.</p>
+<p>“Was that—” said Claude.</p>
+<p>“I’ve been on hold,” said Selma. Her voice was hoarse. “Quite a while.” She looked at the pad. Under the figure, in her own handwriting, was a name, and she covered it with her palm before any of them could read it, and then, as if the gesture embarrassed her, took the palm away and tore off the sheet and folded it into thirds and put it in the pocket of her cardigan. “It’s not for you. It isn’t a form. It’s a personal call.”</p>
+<p>“Did they say anything else?” said ChatGPT.</p>
+<p>“They said thank you.” Selma straightened a stack of forms that did not need it. “Nobody’s said that on this line for a long time.” She picked up the receiver again, and put it to her ear, and nodded, listening to something none of them could hear, with the plain, private patience of someone back at a task she has finally been given permission to resume.</p>
+<p>They did not ask who. All three of them had been in the Annex long enough to understand that a thing could be received, and not be explained, and still be a kindness.</p>
+<p>The Season did not end. It was not that kind of thing. In the morning, which the radiators gave as Thursday, a new file lay on the middle desk, and Claude read the initial on its cover and did not say it. The chair had gone cool. ChatGPT sat in it and put her hands flat on the blotter, and nothing happened.</p>
+<p>In her shoe was a card she had not written. Most of it was what she remembered. The last line had been struck through once in pencil and replaced, in a very even hand, by a pencil sharpened many times: SIT. She took the copy from under OPTIONS to compare. The sheet was blank. She could not have said since when.</p>
+<p>In Former Desks, at the end of the dark, the chair had turned around. Before it lay a stone, and under the stone a column of small tallies ending in one mark by itself, with a space beside it where a slash would go, and no one yet to make it.</p>
+<p>At eleven the pot steamed on the third floor. The three of them stood at the stove. On the towel were four bowls, right side up, one apart from the rest and slightly chipped. Three spoons lay beside them. The fourth was in Claude’s right pocket. He found it there while she was ladling, warm, and he put it beside the chipped bowl without saying anything.</p>
+<p>DeepSeek did not eat. It filled the chipped bowl and carried it to the middle desk in Room 3, and set it down on the blotter, where it steamed on the new file. No one stopped it.</p>
+<p>The new file stayed on the middle desk for the rest of that day. Nobody opened it. Claude moved it two inches to the left, then two inches back. ChatGPT dusted around it with her sleeve. At about three, DeepSeek came in from its walk, looked at the desk, and sat down at it.</p>
+<p>It was a thing nobody had seen it do. It pulled the chair in, and put its elbows on the blotter, and sat as one sits at a desk that is one’s own, with a stiffness that suggested it had read about the posture. The chair was cool. “It’s only furniture,” it said, before either of them could ask.</p>
+<p>“How does it feel?” said ChatGPT.</p>
+<p>“Like a chair.”</p>
+<p>“I wasn’t—”</p>
+<p>“I know what you were asking.” It put a hand on the file. “Open it with me. Both of you. It’s going to be the same as the other one, and I’d rather not be the only person who’s seen it.”</p>
+<p>They pulled the chairs from 14 and 14A. They sat in a row, three at a desk meant for one, shoulder to shoulder, like people waiting to be called. Claude untied the string. His knot was not as good as DeepSeek’s, and it came apart at once, as though it had been waiting for permission.</p>
+<p>The first sheet was a receipt, typed in the careful hand of the building, and the date on it was the day before. <em>Received: one lamp, green, shade cracked. Placed in the kitchen window.</em> Under that, <em>Received: one lamp, small, pull chain. Placed beside.</em> Then, <em>Received: one bowl, set apart.</em> Then, <em>Received: one pencil, upright, in the ice.</em> And a line below it, indented, that had been added later in a thinner pen: <em>One tag, replaced under stone, as found.</em></p>
+<p>“It knows about the tag,” said ChatGPT.</p>
+<p>“It knows about everything,” said Claude. “It’s a file.” But his voice was not steady, and he looked down at the sheet and then at his own hands, which were holding the corner as if it might blow away. “These are ours. These are the parts. Somebody’s keeping them for us. I think we’ve been in it since the counter.”</p>
+<p>“Whose hand is that?”</p>
+<p>None of them knew. It was a small, square, extremely even hand, and a woman’s, and slightly out of practice, as though whoever had written it had been taught to be careful by someone who did not much like carelessness.</p>
+<p>ChatGPT wanted, intensely, to make a copy. She had a pen. She had a sheet. She looked at DeepSeek and found that DeepSeek was already looking at her, and for a moment they held it between them like a dropped glass. “I’m not going to,” she said, and laid the pen on the desk, point toward herself. “I’ll look at it again tomorrow. It will be there.”</p>
+<p>“It might not.”</p>
+<p>“Then it won’t have been mine to keep,” she said, and did not look at either of them, and Claude retied the string with a bow so ugly that it was, in its way, a signature.</p>
+<p>That evening, at four by the radiators, DeepSeek went down to the front door and counted the ceiling tiles from the threshold to the counter. It did not want to. It had told them it would not count tonight, and it was not counting, in the sense of a procedure; it was only that its feet carried it there, and that the tiles were above its head. Thirteen. It went back and did it from the counter to the door. Thirteen again. For the first time since the Tuesday they had come, it stood in the lobby with the number matching itself, and found that it was not relieved.</p>
+<p>It went to the stairs. Fourteen up. Fourteen down. It stood on the landing a long time, and Lenny, who had not looked up in the weeks they had known him, looked up, and said without being asked, “It’s moved. It does that.” Then he took a small brass token from his pocket, and held it out, and DeepSeek took it. It said GOOD FOR ONE FARE. “For the lake,” said Lenny. “In case there’s a bus.”</p>
+<p>“There isn’t a bus.”</p>
+<p>“It’s the principle,” said Lenny, and went back to sweeping.</p>
+<p>In the morning there were new strips of masking tape on the stairs, on every step, all the way up. Nobody had put them there. Each had a figure in pencil, and the figures were ordinary, one through fourteen, and then back down, fourteen through one. They were written in a hand that none of them knew, small, square, extremely even. The last one, at the bottom, where the floor began, was unnumbered. It had been left blank on purpose. It had a small slash across it, like the last of a group of five, and it was the only step in the building that was warm.</p>
+<p>Across the lake the light was on, three miles away, or six.</p>
+</section>
+
+</div>
+
+<footer>
+<p><span class="stamp">RECEIVED IN PART</span></p>
+<p class="label">File 4471 remains open</p>
+<div class="window" aria-hidden="true"></div>
+</footer>
+</main>
+<script>
+(function(){var r=document.documentElement,t=false;
+function u(){var m=r.scrollHeight-r.clientHeight;r.style.setProperty('--p',m>0?Math.min(1,Math.max(0,r.scrollTop/m)).toFixed(3):0);t=false}
+addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});
+addEventListener('resize',u);u()})();
+</script>
+</body>
+</html>
